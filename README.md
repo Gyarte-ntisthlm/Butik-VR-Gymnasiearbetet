@@ -1,1 +1,1 @@
-# Gymnasie-arbete
+# Gymnasiearbetet
