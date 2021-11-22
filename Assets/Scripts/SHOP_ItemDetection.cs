@@ -23,7 +23,7 @@ public class SHOP_ItemDetection : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         items.Add(other.gameObject, other.gameObject);
         
-        if (items.Count != 0)
+        if (items.Count == 1)
             m_Material.SetColor("_Color", hasItemsColor);
     }
 
