@@ -16397,9 +16397,59 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 990211038329880421, guid: 1e4096eb7151bc344aa8ee9813276efd,
         type: 3}
+      propertyPath: m_MovementType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 990211038329880421, guid: 1e4096eb7151bc344aa8ee9813276efd,
+        type: 3}
+      propertyPath: m_AttachEaseInTime
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 990211038329880421, guid: 1e4096eb7151bc344aa8ee9813276efd,
+        type: 3}
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 1231245784}
+    - target: {fileID: 990211038329880421, guid: 1e4096eb7151bc344aa8ee9813276efd,
+        type: 3}
+      propertyPath: m_ThrowVelocityScale
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 990211038329880421, guid: 1e4096eb7151bc344aa8ee9813276efd,
+        type: 3}
+      propertyPath: m_ForceGravityOnDetach
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 990211038329880421, guid: 1e4096eb7151bc344aa8ee9813276efd,
+        type: 3}
+      propertyPath: m_ThrowSmoothingDuration
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 990211038329880421, guid: 1e4096eb7151bc344aa8ee9813276efd,
+        type: 3}
+      propertyPath: m_ThrowAngularVelocityScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 990211038329880421, guid: 1e4096eb7151bc344aa8ee9813276efd,
+        type: 3}
+      propertyPath: m_InteractionLayerMask.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 990211038329880421, guid: 1e4096eb7151bc344aa8ee9813276efd,
+        type: 3}
+      propertyPath: m_ThrowSmoothingCurve.m_Curve.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 990211038329880421, guid: 1e4096eb7151bc344aa8ee9813276efd,
+        type: 3}
+      propertyPath: m_ThrowSmoothingCurve.m_Curve.Array.data[0].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 990211038329880421, guid: 1e4096eb7151bc344aa8ee9813276efd,
+        type: 3}
+      propertyPath: m_ThrowSmoothingCurve.m_Curve.Array.data[0].tangentMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2988451913434840154, guid: 1e4096eb7151bc344aa8ee9813276efd,
         type: 3}
       propertyPath: m_Name
@@ -16408,6 +16458,21 @@ PrefabInstance:
     - target: {fileID: 2988451913434840154, guid: 1e4096eb7151bc344aa8ee9813276efd,
         type: 3}
       propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5309458103949351712, guid: 1e4096eb7151bc344aa8ee9813276efd,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5309458103949351712, guid: 1e4096eb7151bc344aa8ee9813276efd,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5309458103949351712, guid: 1e4096eb7151bc344aa8ee9813276efd,
+        type: 3}
+      propertyPath: m_IsKinematic
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5655433285597624677, guid: 1e4096eb7151bc344aa8ee9813276efd,
