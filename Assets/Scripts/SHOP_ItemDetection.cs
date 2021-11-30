@@ -4,7 +4,7 @@ using UnityEngine;
 public class SHOP_ItemDetection : MonoBehaviour
 {
     // Due to now knowing in what oder the items are removed in, the GameObject is both the reference and the value. 
-    Dictionary<GameObject,GameObject> items = new Dictionary<GameObject, GameObject>(); 
+    public Dictionary<GameObject,GameObject> items = new Dictionary<GameObject, GameObject>(); 
 
     Material m_Material;
 
