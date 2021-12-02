@@ -67,15 +67,7 @@ public class Door_Manager : MonoBehaviour
         }
     }
 
-    // DEBUG FUNCTION
-    private void FixedUpdate() {
-        if (isOpen) {
-            ActivateDoor();
-        } else {
-            DeactivateDoor();
-        }
-    }
-
+    
     // == Look of the door ==
 
     // When this method is called the door will "activate" by changing doorVoids material color to white, 

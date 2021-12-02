@@ -15,7 +15,7 @@ public class SHOP_ItemDetection : MonoBehaviour
     Color emptyColor = Color.red;
 
     private void Start() {
-        m_Material = GetComponent<MeshRenderer>().sharedMaterial;
+        m_Material = GetComponent<Renderer>().material;
         m_Material.SetColor("_Color", emptyColor);
     }
 
