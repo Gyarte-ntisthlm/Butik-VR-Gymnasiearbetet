@@ -4999,64 +4999,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1779998068463693940, guid: 8e636aacfbe55b943b795aaa6d16cf44,
-        type: 3}
-      propertyPath: m_Center.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1779998068463693940, guid: 8e636aacfbe55b943b795aaa6d16cf44,
-        type: 3}
-      propertyPath: m_Center.z
-      value: -0.1
-      objectReference: {fileID: 0}
     - target: {fileID: 1779998068463693943, guid: 8e636aacfbe55b943b795aaa6d16cf44,
         type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1779998068463693943, guid: 8e636aacfbe55b943b795aaa6d16cf44,
-        type: 3}
-      propertyPath: m_MoveSpeed
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1779998068463693943, guid: 8e636aacfbe55b943b795aaa6d16cf44,
-        type: 3}
-      propertyPath: m_GravityApplicationMode
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e636aacfbe55b943b795aaa6d16cf44, type: 3}
---- !u!1 &1297499235 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1779998068463693948, guid: 8e636aacfbe55b943b795aaa6d16cf44,
-    type: 3}
-  m_PrefabInstance: {fileID: 1230007603}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1297499240 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1779998068463693942, guid: 8e636aacfbe55b943b795aaa6d16cf44,
-    type: 3}
-  m_PrefabInstance: {fileID: 1230007603}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1297499235}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03a5df2202a8b96488c744be3bd0c33e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1297499244
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1297499235}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01f69dc1cb084aa42b2f2f8cd87bc770, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_System: {fileID: 1297499240}
 --- !u!43 &1327112974
 Mesh:
   m_ObjectHideFlags: 0
@@ -6272,7 +6221,7 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
-  m_TeleportationProvider: {fileID: 1297499244}
+  m_TeleportationProvider: {fileID: 0}
   m_MatchOrientation: 0
   m_TeleportTrigger: 0
 --- !u!1 &2091521821
