@@ -17,7 +17,6 @@ public class SHOP_ItemDetection : MonoBehaviour
     private void Start() {
         m_Material = GetComponent<MeshRenderer>().sharedMaterial;
         m_Material.SetColor("_Color", emptyColor);
-
     }
 
     private void OnTriggerEnter(Collider other) {
