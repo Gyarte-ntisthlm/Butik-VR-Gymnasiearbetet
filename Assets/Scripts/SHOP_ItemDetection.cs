@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SHOP_ItemDetection : MonoBehaviour
 {
@@ -14,9 +15,13 @@ public class SHOP_ItemDetection : MonoBehaviour
     [SerializeField]
     Color emptyColor = Color.red;
 
+    [SerializeField]
+    GameObject manager;
+
     private void Start() {
         m_Material = GetComponent<Renderer>().material;
         m_Material.SetColor("_Color", emptyColor);
+    
     }
 
     private void OnTriggerEnter(Collider other) {

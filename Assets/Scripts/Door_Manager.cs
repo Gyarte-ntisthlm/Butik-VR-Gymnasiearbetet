@@ -25,28 +25,28 @@ public class Door_Manager : MonoBehaviour
         // if the previous scene was intro, then the player will go to the next test, randomized between Store_TestA and Store_TestB.
         // Otherwise, the player will go to the ThankYouScene
 
-        if(previousScene != "Intro") {
-            switch (SceneManager.GetActiveScene().name) {
+        
+        switch (SceneManager.GetActiveScene().name) {
             case "Intro":
                 // Randomize the next scene between Store_TestA and Store_TestB
                 nextScene = Random.Range(0, 2) == 0 ? "Store_TestA" : "Store_TestB";
                 break;
             case "Store_TestA":
-                nextScene = "Store_TestB";
+                nextScene = previousScene == "Intro" ? "Store_TestB" : "ThankYou";
                 break;
             case "Store_TestB":
-                nextScene = "Store_TestA";
+                nextScene = previousScene == "Intro" ? "Store_TestA" : "ThankYou";
                 break;
             default:
                 nextScene = "ThankYou";
                 break;
-            }
-        } else {
-            nextScene = "ThankYou";
         }
 
         // Set the current scene as the previousScene.
         previousScene = SceneManager.GetActiveScene().name;
+
+        Debug.Log("Next scene: " + nextScene);
+        Debug.Log("Previous scene: " + previousScene);
     }
 
     // If the door is entered call ChangeScene.
