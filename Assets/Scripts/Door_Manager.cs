@@ -45,8 +45,8 @@ public class Door_Manager : MonoBehaviour
         // Set the current scene as the previousScene.
         previousScene = SceneManager.GetActiveScene().name;
 
-        Debug.Log("Next scene: " + nextScene);
         Debug.Log("Previous scene: " + previousScene);
+        Debug.Log("Next scene: " + nextScene);
     }
 
     // If the door is entered call ChangeScene.
