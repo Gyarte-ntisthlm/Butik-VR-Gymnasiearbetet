@@ -2081,7 +2081,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "80353213672345f3964e72b73d878c7d",
     "m_Id": 0,
-    "m_DisplayName": "Cuttof Hight",
+    "m_DisplayName": "Cut Of Hight",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -2230,15 +2230,15 @@
     "m_Guid": {
         "m_GuidSerialized": "984bf0da-ce91-4271-b369-3b9bd7675318"
     },
-    "m_Name": "Cuttof Hight",
+    "m_Name": "Cut Of Hight",
     "m_DefaultReferenceName": "Vector1_8ff791822a0c490283f5c1d2febbd954",
-    "m_OverrideReferenceName": "CuttofHight_",
+    "m_OverrideReferenceName": "_CutOfHight",
     "m_GeneratePropertyBlock": true,
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
-    "m_Value": 0.20000000298023225,
+    "m_Value": -5.0,
     "m_FloatType": 0,
     "m_RangeValues": {
         "x": 0.0,
