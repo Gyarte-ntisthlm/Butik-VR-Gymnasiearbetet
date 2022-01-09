@@ -1104,7 +1104,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 2
   m_SelectMode: 1
   m_CustomReticle: {fileID: 3686050460246653115, guid: 487f74cb8d94864409a2d92990d9e729, type: 3}
   m_FirstHoverEntered:
@@ -1970,6 +1970,10 @@ PrefabInstance:
       propertyPath: m_InvalidColorGradient.key1.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 830819480266639278, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1489930730540588975, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
       propertyPath: onTeleportActivate.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
       value: set_enableInputActions
@@ -1981,6 +1985,10 @@ PrefabInstance:
     - target: {fileID: 2461474084981816392, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
       propertyPath: m_Radius
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2833438856936834964, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5379694856608801955, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
       propertyPath: m_ModelPrefab
@@ -2011,16 +2019,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6999493590214110590, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6999493590214110590, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
       propertyPath: m_HapticSelectEnterDuration
-      value: 0
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6999493590214110590, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
       propertyPath: m_HapticSelectEnterIntensity
-      value: 0
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 6999493590214110590, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
       propertyPath: m_PlayHapticsOnSelectEntered
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6999493590214110591, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
       propertyPath: m_EnableInputActions
@@ -2091,12 +2103,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6999493590720878748, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6999493590720878748, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
       propertyPath: m_HapticSelectEnterDuration
       value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6999493590720878748, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
       propertyPath: m_HapticSelectEnterIntensity
-      value: 0.01
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 6999493590720878748, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
       propertyPath: m_PlayHapticsOnSelectEntered
