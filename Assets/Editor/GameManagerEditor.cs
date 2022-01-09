@@ -120,6 +120,14 @@ public class GameManagerEditor : EditorWindow
     GUILayout.Label("OnSceneCompleted: " + oic);
     GUILayout.Label("OnReset: " + or);
     GUILayout.EndVertical();
+
+    GUILayout.BeginVertical("Box");
+    GUILayout.Label("Launch Questionnaire", EditorStyles.boldLabel);
+    if (GUILayout.Button("Launch Questionnaire"))
+    {
+      QuestionnaireLauncher.instance.LaunchQuestionnaire();
+    }
+    GUILayout.EndVertical();
   }
 
   // When the GameManager has triggered an event return true.

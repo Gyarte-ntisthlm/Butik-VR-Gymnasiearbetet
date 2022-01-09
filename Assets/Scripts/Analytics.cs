@@ -81,6 +81,7 @@ public class Analytics : MonoBehaviour
   {
     // Save the timestamp
     analyticsData.SceneCompleted = Time.timeSinceLevelLoad;
+    analyticsData.prefix = prefix;
 
     Save(analyticsData);
   }
@@ -92,28 +93,18 @@ public class Analytics : MonoBehaviour
     Debug.Log(json);
     Debug.Log($"Saving analytics to {path}");
 
-    // If the file doesn't exist, create it, otherwise just append to it.
-    // Append the json to the file
-    if (!File.Exists(path))
-    {
-      File.WriteAllText(path, json);
-      Debug.Log("File created");
-    }
-    else
-    {
-      File.AppendAllText(path, json);
-      Debug.Log("File appended");
-    }
-
+    File.WriteAllText(path, json);
     Debug.Log("Analytics saved to file");
   }
 }
 
 [Serializable]
-class AnalyticsData
+public class AnalyticsData
 {
   // Each event in GameManager is a key, and the time since the game started is the value.
   // in the format: { "event_name": time_since_game_started }
+
+  public string prefix = "";
   public float PurchaseBegin;
   public float PurchaseCompleted;
   public float SceneCompleted;
