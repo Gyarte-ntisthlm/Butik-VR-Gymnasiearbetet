@@ -987,6 +987,8 @@ GameObject:
   - component: {fileID: 1482346372}
   - component: {fileID: 1482346374}
   - component: {fileID: 1482346373}
+  - component: {fileID: 1482346376}
+  - component: {fileID: 1482346375}
   m_Layer: 0
   m_Name: Analytics Manager
   m_TagString: Untagged
@@ -1033,6 +1035,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefix: Dev
+--- !u!114 &1482346375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482346371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7271febc5bbe71a4f884356e8114fa64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefix: B
+--- !u!114 &1482346376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482346371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7271febc5bbe71a4f884356e8114fa64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefix: A
 --- !u!114 &1560324753 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6999493590356022001, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
