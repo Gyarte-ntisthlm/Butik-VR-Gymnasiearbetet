@@ -7,11 +7,11 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SG_Door
-  m_Shader: {fileID: -6465566751694194690, guid: 99d6442e259d8e149b8974fee795bd43, type: 3}
+  m_Name: SG_Liquid
+  m_Shader: {fileID: -6465566751694194690, guid: a710e151fb149c34e9886b7b41dad52b, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
+  m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -19,10 +19,6 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - Texture_:
-        m_Texture: {fileID: 2800000, guid: 286f3b70db1c6294fa5552a7534202ec, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -36,10 +32,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - EdgeWidth_: 0.1
-    - NoiseStr_: 1
-    - Noise_: 50
-    - _CutOfHight: 3.02
+    - _Fill: 1
+    - _WobbleX: 0
+    - _WobbleZ: 0
     m_Colors:
-    - EdgeColor_: {r: 0, g: 734.87085, b: 532.728, a: 1}
+    - _SideColor: {r: 0, g: 136.45868, b: 164.22644, a: 0}
+    - _TopColor: {r: 39.097195, g: 212.52832, b: 196.6508, a: 0}
   m_BuildTextureStacks: []
