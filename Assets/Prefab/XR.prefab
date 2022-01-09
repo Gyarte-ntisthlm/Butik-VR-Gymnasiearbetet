@@ -71,7 +71,7 @@ MonoBehaviour:
   m_InvalidColorGradient:
     serializedVersion: 2
     key0: {r: 1, g: 0.045656618, b: 0, a: 1}
-    key1: {r: 0.06274508, g: 0.7254902, b: 0.08549452, a: 0}
+    key1: {r: 1, g: 0.047058824, b: 0, a: 0}
     key2: {r: 1, g: 1, b: 1, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
@@ -142,6 +142,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6999493590268574326}
     m_Modifications:
+    - target: {fileID: 1081442497406434230, guid: 29c130b8f7e52944399499ccaabf5056, type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1164439748352156599, guid: 29c130b8f7e52944399499ccaabf5056, type: 3}
+      propertyPath: onTeleportActivate.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: set_enableInputActions
+      objectReference: {fileID: 0}
+    - target: {fileID: 1164439748352156599, guid: 29c130b8f7e52944399499ccaabf5056, type: 3}
+      propertyPath: onTeleportActivate.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: UnityEngine.XR.Interaction.Toolkit.XRBaseController, Unity.XR.Interaction.Toolkit
+      objectReference: {fileID: 0}
+    - target: {fileID: 2582746707136428940, guid: 29c130b8f7e52944399499ccaabf5056, type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786969993462726736, guid: 29c130b8f7e52944399499ccaabf5056, type: 3}
+      propertyPath: m_Radius
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 6213222451680874765, guid: 29c130b8f7e52944399499ccaabf5056, type: 3}
       propertyPath: m_SelectAction.m_Reference
       value: 
@@ -294,9 +314,73 @@ PrefabInstance:
       propertyPath: m_LineWidth
       value: 0.03
       objectReference: {fileID: 0}
+    - target: {fileID: 7324706251515225218, guid: 29c130b8f7e52944399499ccaabf5056, type: 3}
+      propertyPath: m_InvalidColorGradient.key1.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7324706251515225218, guid: 29c130b8f7e52944399499ccaabf5056, type: 3}
+      propertyPath: m_InvalidColorGradient.key1.g
+      value: 0.047058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 7324706251515225218, guid: 29c130b8f7e52944399499ccaabf5056, type: 3}
+      propertyPath: m_InvalidColorGradient.key1.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7324706251515225220, guid: 29c130b8f7e52944399499ccaabf5056, type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7324706251515225220, guid: 29c130b8f7e52944399499ccaabf5056, type: 3}
+      propertyPath: m_HapticSelectEnterDuration
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7324706251515225220, guid: 29c130b8f7e52944399499ccaabf5056, type: 3}
+      propertyPath: m_HapticSelectEnterIntensity
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7324706251515225220, guid: 29c130b8f7e52944399499ccaabf5056, type: 3}
+      propertyPath: m_PlayHapticsOnSelectEntered
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7324706252015702374, guid: 29c130b8f7e52944399499ccaabf5056, type: 3}
       propertyPath: m_LineType
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7324706252015702374, guid: 29c130b8f7e52944399499ccaabf5056, type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 6999493589088707290}
+    - target: {fileID: 7324706252015702374, guid: 29c130b8f7e52944399499ccaabf5056, type: 3}
+      propertyPath: m_KeepSelectedTargetValid
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7324706252015702374, guid: 29c130b8f7e52944399499ccaabf5056, type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7324706252015702374, guid: 29c130b8f7e52944399499ccaabf5056, type: 3}
+      propertyPath: m_HapticSelectEnterDuration
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7324706252015702374, guid: 29c130b8f7e52944399499ccaabf5056, type: 3}
+      propertyPath: m_HapticSelectEnterIntensity
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7324706252015702374, guid: 29c130b8f7e52944399499ccaabf5056, type: 3}
+      propertyPath: m_PlayHapticsOnSelectEntered
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7324706252015702375, guid: 29c130b8f7e52944399499ccaabf5056, type: 3}
+      propertyPath: m_EnableInputActions
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7324706252015702375, guid: 29c130b8f7e52944399499ccaabf5056, type: 3}
+      propertyPath: m_SelectAction.m_Reference
+      value: 
+      objectReference: {fileID: -4084014799535200556, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+    - target: {fileID: 8188601228148010936, guid: 29c130b8f7e52944399499ccaabf5056, type: 3}
+      propertyPath: m_Radius
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7324706252015702372, guid: 29c130b8f7e52944399499ccaabf5056, type: 3}
@@ -384,6 +468,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6095930997406984279, guid: fc0506b9913d4944585ebf1e6e894c9b, type: 3}
   m_PrefabInstance: {fileID: 3871453714933729932}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6999493589088707290 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6095930997406984278, guid: fc0506b9913d4944585ebf1e6e894c9b, type: 3}
+  m_PrefabInstance: {fileID: 3871453714933729932}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83e4e6cca11330d4088d729ab4fc9d9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8428186452083130452
 PrefabInstance:
   m_ObjectHideFlags: 0
