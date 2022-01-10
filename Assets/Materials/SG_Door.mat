@@ -39,7 +39,7 @@ Material:
     - EdgeWidth_: 0.1
     - NoiseStr_: 1
     - Noise_: 50
-    - _CutOfHight: 13.000032
+    - _CutOfHight: 13
     m_Colors:
     - EdgeColor_: {r: 0, g: 734.87085, b: 532.728, a: 1}
   m_BuildTextureStacks: []
