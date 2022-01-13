@@ -37,7 +37,7 @@ public class QuestionnaireLauncher : MonoBehaviour
 
     // Launch the questionnaire
     Debug.Log("QuestionnaireLauncher.OnQuestionnaireLaunched");
-    Application.OpenURL($"https://nti-gyarte.web.app/questionnaire?id={id}&{queryString}&secret={secret}");
+    Application.OpenURL($"https://nti-gyarte.web.app/questionnaire?id={id}&{queryString}&secret={secret}&build={Application.version}");
   }
 
   string[] GetDataFiles()
