@@ -16,15 +16,17 @@ public class DissolveManager : MonoBehaviour
 
   private void Start()
   {
-    GameManager.instance.onPurchaseCompleted += Dissolve;
-    GameManager.instance.onIntroGrabCompleted += Dissolve;
+    GameManager.instance.onPurchaseCompleted += DissolveForwardsOnly;
+    GameManager.instance.onSceneCompleted += DissolveBackwardsOnly;
 
     GameManager.instance.onReset += OnReset;
   }
   private void OnDestroy()
   {
-    GameManager.instance.onPurchaseCompleted -= Dissolve;
-    GameManager.instance.onIntroGrabCompleted -= Dissolve;
+    GameManager.instance.onPurchaseCompleted -= DissolveForwardsOnly;
+    GameManager.instance.onSceneCompleted -= DissolveBackwardsOnly;
+
+    GameManager.instance.onReset -= OnReset;
   }
 
   private void Dissolve()
@@ -39,6 +41,22 @@ public class DissolveManager : MonoBehaviour
       StartCoroutine(DissolveSmoothlyBackwards(mat));
     }
 
+  }
+
+  public void DissolveBackwardsOnly()
+  {
+    foreach (Material mat in materialsBackward)
+    {
+      StartCoroutine(DissolveSmoothlyBackwards(mat));
+    }
+  }
+
+  public void DissolveForwardsOnly()
+  {
+    foreach (Material mat in materialsForward)
+    {
+      StartCoroutine(DissolveSmoothly(mat));
+    }
   }
 
   private IEnumerator DissolveSmoothly(Material mat)
@@ -60,7 +78,7 @@ public class DissolveManager : MonoBehaviour
     }
   }
 
-    private IEnumerator DissolveSmoothlyBackwards(Material mat)
+  private IEnumerator DissolveSmoothlyBackwards(Material mat)
   {
 
     float dissolveAmount = dissolveTo;

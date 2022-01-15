@@ -19,7 +19,7 @@ public class Analytics : MonoBehaviour
   private AnalyticsData analyticsData = new AnalyticsData();
 
   // Start is called before the first frame update
-  void Start()
+  private void Start()
   {
     path = $"{Application.persistentDataPath}/{prefix}_analytics.log";
 
@@ -30,15 +30,20 @@ public class Analytics : MonoBehaviour
     GameManager.instance.onReset += OnReset;
     GameManager.instance.onEvalCompleted += OnEvalCompleted;
 
-    // Intro events
-    GameManager.instance.onIntroMovement += OnIntroMovement;
-    GameManager.instance.onIntroTeleportCompleted += OnIntroTeleportCompleted;
-    GameManager.instance.onIntroSnapCompleted += OnIntroSnapCompleted;
-    GameManager.instance.onIntroGrabCompleted += OnIntroGrabCompleted;
-
     // Purchase events
     GameManager.instance.onPurchaseBegin += OnPurchaseBegin;
     GameManager.instance.onPurchaseCompleted += OnPurchaseCompleted;
+  }
+
+  private void OnDestroy() {
+    // General events
+    GameManager.instance.onSceneCompleted -= OnSceneCompleted;
+    GameManager.instance.onReset -= OnReset;
+    GameManager.instance.onEvalCompleted -= OnEvalCompleted;
+
+    // Purchase events
+    GameManager.instance.onPurchaseBegin -= OnPurchaseBegin;
+    GameManager.instance.onPurchaseCompleted -= OnPurchaseCompleted;
   }
 
   private void OnPurchaseCompleted()
@@ -51,22 +56,6 @@ public class Analytics : MonoBehaviour
   {
     // Save the timestamp since level loaded
     analyticsData.PurchaseBegin = Time.timeSinceLevelLoad;
-  }
-
-  private void OnIntroGrabCompleted()
-  {
-  }
-
-  private void OnIntroSnapCompleted()
-  {
-  }
-
-  private void OnIntroTeleportCompleted()
-  {
-  }
-
-  private void OnIntroMovement()
-  {
   }
 
   private void OnEvalCompleted()

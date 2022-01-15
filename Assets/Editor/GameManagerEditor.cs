@@ -7,11 +7,7 @@ public class GameManagerEditor : EditorWindow
   private int opc = 0;
   private int opa = 0;
   private int oec = 0;
-  private int oim = 0;
-  private int oitc = 0;
-  private int oisc = 0;
-  private int og = 0;
-  private int oic = 0;
+  private int osc = 0;
   private int or = 0;
 
 
@@ -24,10 +20,6 @@ public class GameManagerEditor : EditorWindow
 
     GameManager.instance.onEvalCompleted += OnEvalCompleted;
 
-    GameManager.instance.onIntroMovement += OnIntroMovement;
-    GameManager.instance.onIntroTeleportCompleted += OnIntroTeleportCompleted;
-    GameManager.instance.onIntroSnapCompleted += OnIntroSnapCompleted;
-    GameManager.instance.onIntroGrabCompleted += OnIntroGrabCompleted;
     GameManager.instance.onSceneCompleted += OnSceneCompleted;
 
     GameManager.instance.onReset += OnReset;
@@ -78,26 +70,6 @@ public class GameManagerEditor : EditorWindow
     GUILayout.EndVertical();
 
     GUILayout.BeginVertical("Box");
-    GUILayout.Label("Intro Events", EditorStyles.boldLabel);
-    if (GUILayout.Button("OnIntroMovement"))
-    {
-      GameManager.instance.OnIntroMovement();
-    }
-    if (GUILayout.Button("OnIntroTeleportCompleted"))
-    {
-      GameManager.instance.OnIntroTeleportCompleted();
-    }
-    if (GUILayout.Button("OnIntroSnapCompleted"))
-    {
-      GameManager.instance.OnIntroSnapCompleted();
-    }
-    if (GUILayout.Button("OnIntroGrabCompleted"))
-    {
-      GameManager.instance.OnIntroGrabCompleted();
-    }
-    GUILayout.EndVertical();
-
-    GUILayout.BeginVertical("Box");
     GUILayout.Label("Reset Events", EditorStyles.boldLabel);
     if (GUILayout.Button("OnReset"))
     {
@@ -113,11 +85,7 @@ public class GameManagerEditor : EditorWindow
     GUILayout.Label("OnPurchaseCompleted: " + opc);
     GUILayout.Label("OnPurchaseAborted: " + opa);
     GUILayout.Label("OnEvalCompleted: " + oec);
-    GUILayout.Label("OnIntroMovement: " + oim);
-    GUILayout.Label("OnIntroTeleportCompleted: " + oitc);
-    GUILayout.Label("OnIntroSnapCompleted: " + oisc);
-    GUILayout.Label("OnIntroGrabCompleted: " + og);
-    GUILayout.Label("OnSceneCompleted: " + oic);
+    GUILayout.Label("OnSceneCompleted: " + osc);
     GUILayout.Label("OnReset: " + or);
     GUILayout.EndVertical();
 
@@ -135,11 +103,7 @@ public class GameManagerEditor : EditorWindow
   private void OnPurchaseCompleted() => opc++;
   private void OnPurchaseAborted() => opa++;
   private void OnEvalCompleted() => oec++;
-  private void OnIntroMovement() => oim++;
-  private void OnIntroTeleportCompleted() => oitc++;
-  private void OnIntroSnapCompleted() => oisc++;
-  private void OnIntroGrabCompleted() => og++;
-  private void OnSceneCompleted() => oic++;
+  private void OnSceneCompleted() => osc++;
   private void OnReset() => or++;
 
 
@@ -152,10 +116,6 @@ public class GameManagerEditor : EditorWindow
 
     GameManager.instance.onEvalCompleted -= OnEvalCompleted;
 
-    GameManager.instance.onIntroMovement -= OnIntroMovement;
-    GameManager.instance.onIntroTeleportCompleted -= OnIntroTeleportCompleted;
-    GameManager.instance.onIntroSnapCompleted -= OnIntroSnapCompleted;
-    GameManager.instance.onIntroGrabCompleted -= OnIntroGrabCompleted;
     GameManager.instance.onSceneCompleted -= OnSceneCompleted;
 
     GameManager.instance.onReset -= OnReset;

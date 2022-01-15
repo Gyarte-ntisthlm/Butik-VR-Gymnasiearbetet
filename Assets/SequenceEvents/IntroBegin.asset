@@ -12,8 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cf93d6044946094aa8334e2f1fbeb07, type: 3}
   m_Name: IntroBegin
   m_EditorClassIdentifier: 
-  subtitle: 
   delayFromTrigger: 30
+  delayLightActivation: 0
+  delayObjectActivation: 0
+  delayObjectDeactivation: 0
   subtitleDuration: 0
-  audioSource: {fileID: 0}
   audioClip: {fileID: 0}
+  subtitle: 
+  audioSource: {fileID: 0}
+  light: {fileID: 0}
+  objectsToActivate: []
+  objectsToDeactivate: []
+  eventsToTrigger: []

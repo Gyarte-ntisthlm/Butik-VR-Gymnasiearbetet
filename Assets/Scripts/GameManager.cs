@@ -18,14 +18,6 @@ public class GameManager : MonoBehaviour
   // Eval events
   // The "onPurchaseCompleted" dubles as the "onEvalBegin" event.
   public event Action onEvalCompleted;
-
-  // Intro events
-  // The tutorial is split into 3 parts, the movement, grab and start.
-  public event Action onIntroMovement;
-  public event Action onIntroTeleportCompleted;
-  public event Action onIntroSnapCompleted;
-
-  public event Action onIntroGrabCompleted;
   public event Action onSceneCompleted;
 
   // Reset events
@@ -38,12 +30,6 @@ public class GameManager : MonoBehaviour
 
   // Eval events.
   public void OnEvalCompleted() => onEvalCompleted?.Invoke();
-
-  // Intro events.
-  public void OnIntroMovement() => onIntroMovement?.Invoke();
-  public void OnIntroTeleportCompleted() => onIntroTeleportCompleted?.Invoke();
-  public void OnIntroSnapCompleted() => onIntroSnapCompleted?.Invoke();
-  public void OnIntroGrabCompleted() => onIntroGrabCompleted?.Invoke();
 
   /// <summary>
   /// Use this command when the scene is done, this will trigger a scene change as well as trigger the reset event.
