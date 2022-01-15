@@ -23,14 +23,14 @@ public class SequenceEvent : ScriptableObject
     [Range(0, 15)]
     public float delayObjectDeactivation;
 
-    [Tooltip("This should be a bit longer than the audio clip duration.")]
-    [Range(0, 30)]
+    [Tooltip("This is for how long each subtitle should be displayed.")]
+    [Range(3, 30)]
     public float subtitleDuration;
 
     [Space]
 
     public AudioClip audioClip;
-    public string subtitle;
+    public List<string> subtitles;
 
     [Space]
 

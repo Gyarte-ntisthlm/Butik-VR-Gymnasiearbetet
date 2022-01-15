@@ -5,8 +5,6 @@ public class OffsetInteractable : XRGrabInteractable
 {
     protected override void OnSelectEntering(SelectEnterEventArgs args){
         base.OnSelectEntering(args);
-        Debug.Log("Select Enter");
-
         MatchAttachPoint(args.interactor);
     }
 

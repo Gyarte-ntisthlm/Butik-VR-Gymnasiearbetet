@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cf93d6044946094aa8334e2f1fbeb07, type: 3}
+  m_Name: IntroTeleportation
+  m_EditorClassIdentifier: 
+  delayFromTrigger: 30
+  delayLightActivation: 0
+  delayObjectActivation: 0
+  delayObjectDeactivation: 0
+  subtitleDuration: 3
+  audioClip: {fileID: 0}
+  subtitles:
+  - 'Welcome TEST SUBJECT: 021'
+  - First we are going to calibrate your movement.
+  - Use your thumbstick to initiate teleportation,
+  - let go of the thumbstick when you wish to teleport.
+  audioSource: {fileID: 0}
+  light: {fileID: 0}
+  objectsToActivate: []
+  objectsToDeactivate: []
+  eventsToTrigger: []
