@@ -12,6 +12,9 @@ public class SequenceManager : MonoBehaviour
     public static SequenceManager instance;
     private List<GameObject> instantiatedObjects;
 
+    // To prevent the sequence from being triggered multiple times.
+    private bool isPlaying = false;
+
     private void Awake() {
         instance = this;
     }
@@ -20,6 +23,10 @@ public class SequenceManager : MonoBehaviour
     {
         Debug.Log($"OnEventTriggered: {sequenceEvent.name}");
 
+        if (isPlaying) return;
+        isPlaying = true;
+        StartCoroutine(IsPlayingTimer());
+        
         // Wait for the delay.
         StartCoroutine(ExecuteSequenceEvent(sequenceEvent));
     }
@@ -133,6 +140,12 @@ public class SequenceManager : MonoBehaviour
                 go.SetActive(false);
             }
         }
+    }
+
+    IEnumerator IsPlayingTimer()
+    {
+        yield return new WaitForSeconds(3);
+        isPlaying = false;
     }
 
     #if UNITY_EDITOR
