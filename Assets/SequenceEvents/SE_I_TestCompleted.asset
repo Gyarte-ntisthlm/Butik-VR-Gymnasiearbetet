@@ -10,18 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2cf93d6044946094aa8334e2f1fbeb07, type: 3}
-  m_Name: IntroComplete
+  m_Name: SE_I_TestCompleted
   m_EditorClassIdentifier: 
   delayFromTrigger: 0
   delayLightActivation: 0
   delayObjectActivation: 0
   delayObjectDeactivation: 0
-  subtitleDuration: 0
-  audioClip: {fileID: 0}
-  subtitles: []
+  subtitleDuration: 3
+  audioClip: {fileID: 8300000, guid: 4507142c6ee5bb545afe55b48672775c, type: 3}
+  subtitles:
+  - Good,
+  - 'Test completed, '
+  - "please rate your experience\u2026 "
   audioSource: {fileID: 0}
   light: {fileID: 0}
-  objectsToActivate:
-  - {fileID: 919132149155446097, guid: c756cb22f72e8f64e8e103132e361df6, type: 3}
+  objectsToActivate: []
   objectsToDeactivate: []
   eventsToTrigger: []

@@ -10,15 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2cf93d6044946094aa8334e2f1fbeb07, type: 3}
-  m_Name: IntroSnap
+  m_Name: SE_I_RoomB
   m_EditorClassIdentifier: 
   delayFromTrigger: 0
   delayLightActivation: 0
   delayObjectActivation: 0
   delayObjectDeactivation: 0
-  subtitleDuration: 0
-  audioClip: {fileID: 0}
-  subtitle: 
+  subtitleDuration: 3
+  audioClip: {fileID: 8300000, guid: a9813827ba23acd4eb5d410fcfeed892, type: 3}
+  subtitles:
+  - Room B.
+  - In this test you are going to purchase a sword.
+  - Go to the shopkeeper and initiate a conversation
+  - 'by using your left or right trigger button.  '
   audioSource: {fileID: 0}
   light: {fileID: 0}
   objectsToActivate: []

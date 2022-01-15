@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2cf93d6044946094aa8334e2f1fbeb07, type: 3}
-  m_Name: IntroTeleportation
+  m_Name: SE_TY_Complete
   m_EditorClassIdentifier: 
-  delayFromTrigger: 5
+  delayFromTrigger: 0
   delayLightActivation: 0
   delayObjectActivation: 0
   delayObjectDeactivation: 0
   subtitleDuration: 3
-  audioClip: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: be52eede51fbf9b4cadf8c57ca7f0ef9, type: 3}
   subtitles:
-  - 'Welcome TEST SUBJECT: 021'
-  - First we are going to calibrate your movement.
-  - Use your thumbstick to initiate teleportation,
-  - let go of the thumbstick when you wish to teleport.
+  - Thank you for participating in Butik VR.
+  - To complete the game in its entirety,
+  - answer the questions in the questionnaire opened on your desktop.
+  - Thank You.
   audioSource: {fileID: 0}
   light: {fileID: 0}
   objectsToActivate: []
