@@ -27,7 +27,7 @@ MonoBehaviour:
   - In this test you are going to purchase a sword.
   - Go to the shopkeeper and initiate a conversation
   - 'by using your left or right trigger button.  '
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 7550719499019951767, guid: 5e686545953d7f84789e133a20a71a3b, type: 3}
   objectsToActivateID: 0
   objectsToDeactivateID: 0
   eventsToTrigger: []

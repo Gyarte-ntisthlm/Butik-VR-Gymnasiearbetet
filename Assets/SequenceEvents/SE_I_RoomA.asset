@@ -29,7 +29,7 @@ MonoBehaviour:
   - 'grab the potion you want to purchase '
   - and place it in the designated purchase area.
   - To pay, place a coin in the area.
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 7550719499019951767, guid: 5e686545953d7f84789e133a20a71a3b, type: 3}
   objectsToActivateID: 0
   objectsToDeactivateID: 0
   eventsToTrigger: []

@@ -10,21 +10,25 @@ public class DissolveManager : MonoBehaviour
     [Range(0.01f, 1f)]
     public float dissolveSpeed = 0.05f;
 
-    public float dissolveFrom = 100f;
+    public float dissolveFrom = 13f;
 
     public float dissolveTo = -5f;
+
+    private void Awake() {
+        SetTo();
+    }
 
     private void Start()
     {
         GameManager.instance.onPurchaseCompleted += DissolveForwardsOnly;
-        GameManager.instance.onSceneCompleted += DissolveBackwardsOnly;
+        GameManager.instance.onActivateDoor += DissolveBackwardsOnly;
 
         GameManager.instance.onReset += OnReset;
     }
     private void OnDestroy()
     {
         GameManager.instance.onPurchaseCompleted -= DissolveForwardsOnly;
-        GameManager.instance.onSceneCompleted -= DissolveBackwardsOnly;
+        GameManager.instance.onActivateDoor -= DissolveBackwardsOnly;
 
         GameManager.instance.onReset -= OnReset;
     }
@@ -107,6 +111,19 @@ public class DissolveManager : MonoBehaviour
         foreach (Material mat in materialsBackward)
         {
             mat.SetFloat("_CutOfHight", dissolveFrom);
+        }
+    }
+
+    public void SetTo()
+    {
+        foreach (Material mat in materialsForward)
+        {
+            mat.SetFloat("_CutOfHight", dissolveTo);
+        }
+
+        foreach (Material mat in materialsBackward)
+        {
+            mat.SetFloat("_CutOfHight", dissolveTo);
         }
     }
 }

@@ -23,6 +23,8 @@ public class GameManager : MonoBehaviour
     // Reset events
     public event Action onReset;
 
+    public event Action onActivateDoor;
+
     // Purchase events.
     public void OnPurchaseBegin() => onPurchaseBegin?.Invoke();
     public void OnPurchaseCompleted() => onPurchaseCompleted?.Invoke();
@@ -35,5 +37,6 @@ public class GameManager : MonoBehaviour
     /// Use this command when the scene is done, this will trigger a scene change as well as trigger the reset event.
     /// </summary>
     public void OnSceneCompleted() => onSceneCompleted?.Invoke();
+    public void OnActivateDoor() => onActivateDoor?.Invoke();
     public void OnReset() => onReset?.Invoke();
 }

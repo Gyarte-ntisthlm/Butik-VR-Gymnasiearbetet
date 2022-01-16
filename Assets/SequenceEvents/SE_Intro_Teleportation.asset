@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SE_Intro_Teleportation
   m_EditorClassIdentifier: 
   delayFromTrigger: 5
-  delayLightActivation: 0
+  delayLightActivation: 11
   delayObjectActivation: 0
   delayObjectDeactivation: 0
   subtitleDuration:
@@ -27,7 +27,7 @@ MonoBehaviour:
   - First we are going to teach you some basic movement.
   - Use your thumbstick to initiate teleportation,
   - let go of the thumbstick when you wish to teleport.
-  audioSource: {fileID: 0}
-  objectsToActivateID: 0
+  audioSource: {fileID: 7550719499019951767, guid: 5e686545953d7f84789e133a20a71a3b, type: 3}
+  objectsToActivateID: 2
   objectsToDeactivateID: 0
   eventsToTrigger: []

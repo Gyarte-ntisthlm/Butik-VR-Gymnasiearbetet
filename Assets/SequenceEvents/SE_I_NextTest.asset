@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2cf93d6044946094aa8334e2f1fbeb07, type: 3}
-  m_Name: SE_I_Good
+  m_Name: SE_I_NextTest
   m_EditorClassIdentifier: 
-  delayFromTrigger: 0
+  delayFromTrigger: 3
   delayLightActivation: 0
   delayObjectActivation: 0
   delayObjectDeactivation: 0
   subtitleDuration:
   - 3
-  audioClip: {fileID: 8300000, guid: 032c0eca09b6af445b037c1ded7e8439, type: 3}
+  audioClip: {fileID: 8300000, guid: ebadf1bca4284fc48ac0e2d7a608f6d5, type: 3}
   subtitles:
-  - Good
+  - 'Your next test will be:'
   audioSource: {fileID: 7550719499019951767, guid: 5e686545953d7f84789e133a20a71a3b, type: 3}
   objectsToActivateID: 0
   objectsToDeactivateID: 0

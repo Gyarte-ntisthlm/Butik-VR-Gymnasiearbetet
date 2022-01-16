@@ -79,11 +79,13 @@ public class SequenceManager : MonoBehaviour
         if (sequenceEvent.audioSource == null && sequenceEvent.audioClip == null)
             yield return new WaitForSeconds(0);
 
+        AudioSource audioSource = GameObject.Find(sequenceEvent.audioSource.name).GetComponent<AudioSource>();
+
         // Move the source above the trigger area.
-        sequenceEvent.audioSource.transform.position = transform.position + Vector3.up * 10;
+        audioSource.transform.position = transform.position + Vector3.up * 10;
 
         // Play the audio clip.
-        sequenceEvent.audioSource.PlayOneShot(sequenceEvent.audioClip);
+        audioSource.PlayOneShot(sequenceEvent.audioClip);
     }
 
     IEnumerator Subtitles(SequenceEvent sequenceEvent)
@@ -103,13 +105,16 @@ public class SequenceManager : MonoBehaviour
         // Wait for delay.
         yield return new WaitForSeconds(sequenceEvent.delayLightActivation);
 
-        // Get the light.
-        Light light = GameObject.Find(sequenceEvent.name).GetComponent<Light>();
-
-        // Activate the light.
-        light.enabled = true;
+        foreach (SequenceController sc in sequenceControllers)
+        {
+            if (sc.id == sequenceEvent.objectsToActivateID)
+            {
+                sc.GetComponentInChildren<Light>().enabled = true;
+            }
+        }
     }
 
+    // Change of plans, we are only activating the colliders.
     IEnumerator ActivateGameObjects(SequenceEvent sequenceEvent)
     {
         // Wait for delay.
@@ -119,7 +124,7 @@ public class SequenceManager : MonoBehaviour
         {
             if (sc.id == sequenceEvent.objectsToActivateID)
             {
-                sc.gameObject.SetActive(true);
+                sc.gameObject.GetComponents<Collider>()[0].enabled = true;
             }
         }
     }
@@ -137,14 +142,14 @@ public class SequenceManager : MonoBehaviour
         {
             if (sc.id == sequenceEvent.objectsToDeactivateID)
             {
-                sc.gameObject.SetActive(false);
+                sc.gameObject.GetComponents<Collider>()[0].enabled = false;
             }
         }
     }
 
     IEnumerator IsPlayingTimer()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1);
         isPlaying = false;
     }
 
