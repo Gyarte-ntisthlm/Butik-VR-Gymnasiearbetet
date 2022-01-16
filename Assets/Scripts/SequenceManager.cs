@@ -11,23 +11,24 @@ public class SequenceManager : MonoBehaviour
 {
     public static SequenceManager instance;
     private List<GameObject> instantiatedObjects;
-    private List <SequenceController> sequenceControllers;
+    private List<SequenceController> sequenceControllers;
 
     // To prevent the sequence from being triggered multiple times.
     private bool isPlaying = false;
 
-    private void Awake() {
+    private void Awake()
+    {
         instance = this;
     }
 
-    public void OnEventTriggered(SequenceEvent sequenceEvent) 
+    public void OnEventTriggered(SequenceEvent sequenceEvent)
     {
         Debug.Log($"OnEventTriggered: {sequenceEvent.name}");
 
         if (isPlaying) return;
         isPlaying = true;
         StartCoroutine(IsPlayingTimer());
-        
+
         // Wait for the delay.
         StartCoroutine(ExecuteSequenceEvent(sequenceEvent));
     }
@@ -75,9 +76,9 @@ public class SequenceManager : MonoBehaviour
     IEnumerator PlayAudio(SequenceEvent sequenceEvent)
     {
         // Play the audio clip.
-        if (sequenceEvent.audioSource == null && sequenceEvent.audioClip == null) 
+        if (sequenceEvent.audioSource == null && sequenceEvent.audioClip == null)
             yield return new WaitForSeconds(0);
-        
+
         // Move the source above the trigger area.
         sequenceEvent.audioSource.transform.position = transform.position + Vector3.up * 10;
 
@@ -147,7 +148,7 @@ public class SequenceManager : MonoBehaviour
         isPlaying = false;
     }
 
-    #if UNITY_EDITOR
+#if UNITY_EDITOR
     private void OnDrawGizmosSelected()
     {
         if (instance == null) return;
@@ -163,16 +164,16 @@ public class SequenceManager : MonoBehaviour
 
             // Draw a cube at the position of the SequenceController that is the size of its box collider.
             Handles.DrawWireCube(
-                new Vector3 (labelPosition.x, labelPosition.y + 1, labelPosition.z ), 
-                new Vector3 (labelSize.x/5, labelSize.y, labelSize.z/5)
+                new Vector3(labelPosition.x, labelPosition.y + 1, labelPosition.z),
+                new Vector3(labelSize.x / 5, labelSize.y, labelSize.z / 5)
             );
 
             Handles.Label(
-                new Vector3(labelPosition.x, labelPosition.y + 10, labelPosition.z), 
+                new Vector3(labelPosition.x, labelPosition.y + 10, labelPosition.z),
                 sequenceController.sequenceEvent.name
             );
         }
     }
-    #endif
+#endif
 }
 

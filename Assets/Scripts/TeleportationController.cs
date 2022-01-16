@@ -5,35 +5,35 @@ using System;
 
 public class TeleportationController : MonoBehaviour
 {
-  public GameObject baseControllerGameObject;
-  public GameObject teleportationGameObject;
+    public GameObject baseControllerGameObject;
+    public GameObject teleportationGameObject;
 
-  public InputActionReference teleportActionRef;
-  
-  [Space]
-  public UnityEvent onTeleportActivate;
-  public UnityEvent onTeleportCancel;
+    public InputActionReference teleportActionRef;
+
+    [Space]
+    public UnityEvent onTeleportActivate;
+    public UnityEvent onTeleportCancel;
 
 
-  private void Start()
-  {
-    teleportActionRef.action.performed += TeleportActivate;
-    teleportActionRef.action.canceled += TeleportCancel;
-  }
+    private void Start()
+    {
+        teleportActionRef.action.performed += TeleportActivate;
+        teleportActionRef.action.canceled += TeleportCancel;
+    }
 
-  private void TeleportActivate(InputAction.CallbackContext obj)
-  {
-    onTeleportActivate.Invoke();
-  }
+    private void TeleportActivate(InputAction.CallbackContext obj)
+    {
+        onTeleportActivate.Invoke();
+    }
 
-  private void TeleportCancel(InputAction.CallbackContext obj)
-  {
-      Debug.Log("TeleportCancel");
-    Invoke("DeactivateTeleportation", 0.1f);
-  }
+    private void TeleportCancel(InputAction.CallbackContext obj)
+    {
+        Debug.Log("TeleportCancel");
+        Invoke("DeactivateTeleportation", 0.1f);
+    }
 
-  private void DeactivateTeleportation()
-  {
-    onTeleportCancel.Invoke();
-  }
+    private void DeactivateTeleportation()
+    {
+        onTeleportCancel.Invoke();
+    }
 }

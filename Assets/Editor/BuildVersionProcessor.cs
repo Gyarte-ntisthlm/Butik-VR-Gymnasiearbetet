@@ -20,7 +20,7 @@ public class BuildVersionProcessor : IPreprocessBuildWithReport
     private string FindCurrentVersion()
     {
         // Find the current version in the build settings
-        string[] currentVersion = PlayerSettings.bundleVersion.Split('[',']');
+        string[] currentVersion = PlayerSettings.bundleVersion.Split('[', ']');
 
         // If not the proper format, start with the initial version
         return currentVersion.Length == 1 ? primaryVersion : currentVersion[1];
@@ -28,7 +28,7 @@ public class BuildVersionProcessor : IPreprocessBuildWithReport
 
     private void UpdateVersion(string version)
     {
-        if(float.TryParse(version, out float versionNumber))
+        if (float.TryParse(version, out float versionNumber))
         {
             versionNumber += 0.01f;
             string date = System.DateTime.Now.ToString("yyyyMMdd-HH.mm.ff");

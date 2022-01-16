@@ -6,8 +6,10 @@ using TMPro;
 
 public class BuildVersionShower : MonoBehaviour
 {
-    private void Awake() {
-        if (TryGetComponent<TMP_Text>(out TMP_Text text)) {
+    private void Awake()
+    {
+        if (TryGetComponent<TMP_Text>(out TMP_Text text))
+        {
             text.text = Application.version;
         }
     }

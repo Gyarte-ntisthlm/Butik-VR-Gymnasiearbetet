@@ -4,17 +4,17 @@ using UnityEngine;
 using UnityEngine.Events;
 
 [Serializable]
-[CreateAssetMenu(menuName = "Events/SequenceEvent")]
+[CreateAssetMenu(menuName = "Events/SequenceEvent", fileName = "SE_")]
 public class SequenceEvent : ScriptableObject
-{ 
+{
     [Tooltip("Usefull if you want to let the player to \"take in\" their surroundings before playing the audio etc.")]
     [Range(0, 30)]
     public float delayFromTrigger;
-    
+
     [Tooltip("If the light should be activated at a special point in the sequence. For instance on a specific sentence in the audio clip.")]
     [Range(0, 30)]
     public float delayLightActivation;
-    
+
     [Tooltip("If the objects should be activated at a special point in the sequence. For instance on a specific sentence in the audio clip.")]
     [Range(0, 30)]
     public float delayObjectActivation;

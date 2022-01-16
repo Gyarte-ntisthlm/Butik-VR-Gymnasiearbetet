@@ -8,8 +8,8 @@ public class SequenceController : MonoBehaviour
     // Apparently this doesn't work on the anchor point...
     private void OnTriggerEnter(Collider other)
     {
-      if (other.tag != "Player") return;
-      SequenceManager.instance.OnEventTriggered(sequenceEvent);
+        if (other.tag != "Player") return;
+        SequenceManager.instance.OnEventTriggered(sequenceEvent);
     }
 }
 
