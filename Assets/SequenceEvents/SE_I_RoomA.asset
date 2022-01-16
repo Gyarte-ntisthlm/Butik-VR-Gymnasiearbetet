@@ -16,7 +16,12 @@ MonoBehaviour:
   delayLightActivation: 0
   delayObjectActivation: 0
   delayObjectDeactivation: 0
-  subtitleDuration: 3
+  subtitleDuration:
+  - 3
+  - 3
+  - 3
+  - 3
+  - 3
   audioClip: {fileID: 8300000, guid: 28484d434645a9041ad1f11f8e1bc64a, type: 3}
   subtitles:
   - Room A.
@@ -25,7 +30,6 @@ MonoBehaviour:
   - and place it in the designated purchase area.
   - To pay, place a coin in the area.
   audioSource: {fileID: 0}
-  light: {fileID: 0}
-  objectsToActivate: []
-  objectsToDeactivate: []
+  objectsToActivateID: 0
+  objectsToDeactivateID: 0
   eventsToTrigger: []

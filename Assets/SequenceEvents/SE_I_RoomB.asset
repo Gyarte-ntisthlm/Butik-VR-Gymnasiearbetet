@@ -16,7 +16,11 @@ MonoBehaviour:
   delayLightActivation: 0
   delayObjectActivation: 0
   delayObjectDeactivation: 0
-  subtitleDuration: 3
+  subtitleDuration:
+  - 3
+  - 3
+  - 3
+  - 3
   audioClip: {fileID: 8300000, guid: a9813827ba23acd4eb5d410fcfeed892, type: 3}
   subtitles:
   - Room B.
@@ -24,7 +28,6 @@ MonoBehaviour:
   - Go to the shopkeeper and initiate a conversation
   - 'by using your left or right trigger button.  '
   audioSource: {fileID: 0}
-  light: {fileID: 0}
-  objectsToActivate: []
-  objectsToDeactivate: []
+  objectsToActivateID: 0
+  objectsToDeactivateID: 0
   eventsToTrigger: []

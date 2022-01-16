@@ -16,14 +16,16 @@ MonoBehaviour:
   delayLightActivation: 0
   delayObjectActivation: 0
   delayObjectDeactivation: 0
-  subtitleDuration: 3
+  subtitleDuration:
+  - 3
+  - 3
+  - 3
   audioClip: {fileID: 8300000, guid: 4507142c6ee5bb545afe55b48672775c, type: 3}
   subtitles:
   - Good,
   - 'Test completed, '
   - "please rate your experience\u2026 "
   audioSource: {fileID: 0}
-  light: {fileID: 0}
-  objectsToActivate: []
-  objectsToDeactivate: []
+  objectsToActivateID: 0
+  objectsToDeactivateID: 0
   eventsToTrigger: []

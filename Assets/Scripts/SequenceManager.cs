@@ -11,6 +11,7 @@ public class SequenceManager : MonoBehaviour
 {
     public static SequenceManager instance;
     private List<GameObject> instantiatedObjects;
+    private List <SequenceController> sequenceControllers;
 
     // To prevent the sequence from being triggered multiple times.
     private bool isPlaying = false;
@@ -19,7 +20,7 @@ public class SequenceManager : MonoBehaviour
         instance = this;
     }
 
-    public void OnEventTriggered(SequenceEvent sequenceEvent)
+    public void OnEventTriggered(SequenceEvent sequenceEvent) 
     {
         Debug.Log($"OnEventTriggered: {sequenceEvent.name}");
 
@@ -33,6 +34,15 @@ public class SequenceManager : MonoBehaviour
 
     IEnumerator ExecuteSequenceEvent(SequenceEvent sequenceEvent)
     {
+        // Get all sequence controllers.
+        // This is used if any of the objects should be activated or deactivated.
+        // Only does this once it is called and not twice.
+        foreach (SequenceController sc in FindObjectsOfType<SequenceController>())
+        {
+            if (sequenceControllers == null) sequenceControllers = new List<SequenceController>();
+            sequenceControllers.Add(sc);
+        }
+
         // Wait for delay.
         yield return new WaitForSeconds(sequenceEvent.delayFromTrigger);
 
@@ -45,25 +55,11 @@ public class SequenceManager : MonoBehaviour
         // Deactivate objects.
         StartCoroutine(DeactivateGameObjects(sequenceEvent));
 
-        // Play the audio clip.
-        if (sequenceEvent.audioSource != null && sequenceEvent.audioClip != null)
-        {
-            sequenceEvent.audioSource.PlayOneShot(sequenceEvent.audioClip);
-        }
+        // Play audio.
+        StartCoroutine(PlayAudio(sequenceEvent));
 
         // Show the subtitles.
-        foreach (string subtitle in sequenceEvent.subtitles)
-        {
-            Debug.Log(subtitle);
-            yield return new WaitForSeconds(sequenceEvent.subtitleDuration);
-            SubtitleManager.instance.ShowSubtitle(subtitle);
-        }
-
-        // Wait for the subtitle to be hidden.
-        yield return new WaitForSeconds(sequenceEvent.subtitleDuration);
-
-        // Hide the subtitle.
-        SubtitleManager.instance.HideSubtitle();
+        StartCoroutine(Subtitles(sequenceEvent));
 
 
         // If there are any game manager events to trigger, trigger them.
@@ -76,16 +72,41 @@ public class SequenceManager : MonoBehaviour
         }
     }
 
+    IEnumerator PlayAudio(SequenceEvent sequenceEvent)
+    {
+        // Play the audio clip.
+        if (sequenceEvent.audioSource == null && sequenceEvent.audioClip == null) 
+            yield return new WaitForSeconds(0);
+        
+        // Move the source above the trigger area.
+        sequenceEvent.audioSource.transform.position = transform.position + Vector3.up * 10;
+
+        // Play the audio clip.
+        sequenceEvent.audioSource.PlayOneShot(sequenceEvent.audioClip);
+    }
+
+    IEnumerator Subtitles(SequenceEvent sequenceEvent)
+    {
+        for (int i = 0; i < sequenceEvent.subtitles.Length; i++)
+        {
+            SubtitleManager.instance.ShowSubtitle(sequenceEvent.subtitles[i]);
+            yield return new WaitForSeconds(sequenceEvent.subtitleDuration[i]);
+        }
+
+        // Hide the subtitle.
+        SubtitleManager.instance.HideSubtitle();
+    }
+
     IEnumerator ActivateLight(SequenceEvent sequenceEvent)
     {
         // Wait for delay.
         yield return new WaitForSeconds(sequenceEvent.delayLightActivation);
 
-        // Turn on the lights.
-        if (sequenceEvent.light != null)
-        {
-            sequenceEvent.light.enabled = true;
-        }
+        // Get the light.
+        Light light = GameObject.Find(sequenceEvent.name).GetComponent<Light>();
+
+        // Activate the light.
+        light.enabled = true;
     }
 
     IEnumerator ActivateGameObjects(SequenceEvent sequenceEvent)
@@ -94,37 +115,15 @@ public class SequenceManager : MonoBehaviour
         // Wait for delay.
         yield return new WaitForSeconds(sequenceEvent.delayObjectActivation);
 
-
-        // This will not work due to how scriptable objects work.
-        // We can only instantiate the objects that are specified in the SO
-        // and not the ones that are in the scene.
-        // This applies to the light objects to activate and deactivate.
-
-        // // Turn on the objects.
-        // if (sequenceEvent.objectsToActivate != null)
-        // {
-        //     foreach (GameObject go in sequenceEvent.objectsToActivate)
-        //     {
-        //         go.SetActive(true);
-        //     }
-        // }
-
-        // Instantiate the objects.
-        if (sequenceEvent.objectsToActivate != null)
+        foreach (SequenceController sc in sequenceControllers)
         {
-            foreach (GameObject go in sequenceEvent.objectsToActivate)
+            if (sc.id == sequenceEvent.objectsToActivateID)
             {
-                GameObject goInstance = Instantiate(go);
-                goInstance.SetActive(true);
+                sc.gameObject.SetActive(true);
             }
         }
 
-        // This do require us to set up the game objects in the scene with the correct position first.
-        // Then either removing them from the scene or disabling them. Another alternative is creating a different scene for building and gameplay.
-        // In the build scene, create the objects and set them up (overide the transforms for the prefab).
-        // Then in the gameplay scene, simply just set up the managers etc.
 
-        // Skiten man gör när allting går åt skogen... Får fan en huvudvärk.
     }
 
     IEnumerator DeactivateGameObjects(SequenceEvent sequenceEvent)
@@ -132,14 +131,18 @@ public class SequenceManager : MonoBehaviour
         // Wait for delay.
         yield return new WaitForSeconds(sequenceEvent.delayObjectActivation + sequenceEvent.delayObjectDeactivation);
 
-        // Turn off the objects.
-        if (sequenceEvent.objectsToDeactivate != null)
+        // Either use an int for the id, or use tags.
+        // If we use ints, then we have to structure the trigger/controller to be the parent object for the entire sequence.
+        // If we use tags, then the structure does not really matter that much.
+
+        foreach (SequenceController sc in sequenceControllers)
         {
-            foreach (GameObject go in sequenceEvent.objectsToDeactivate)
+            if (sc.id == sequenceEvent.objectsToDeactivateID)
             {
-                go.SetActive(false);
+                sc.gameObject.SetActive(false);
             }
         }
+
     }
 
     IEnumerator IsPlayingTimer()
@@ -149,8 +152,6 @@ public class SequenceManager : MonoBehaviour
     }
 
     #if UNITY_EDITOR
-
-    // Draw a line from the manager to the SequenceControllers
     private void OnDrawGizmosSelected()
     {
         if (instance == null) return;
@@ -174,40 +175,6 @@ public class SequenceManager : MonoBehaviour
                 new Vector3(labelPosition.x, labelPosition.y + 10, labelPosition.z), 
                 sequenceController.sequenceEvent.name
             );
-
-            // // NOTE: Github copilot suggested this and it works sooo.
-
-            // // Draw a line from the SequenceController to all the gameobjects that are to be activated.
-            // for (int i = 0; i < sequenceController.sequenceEvent.objectsToActivate.Count; i++)
-            // {
-            //     GameObject go = sequenceController.sequenceEvent.objectsToActivate[i];
-            //     Handles.color = Color.green;
-            //     Handles.DrawAAPolyLine(2, new Vector3[] { sequenceController.transform.position, go.transform.position });
-            // }
-
-            // // Draw a line from the SequenceController to all the gameobjects that are to be deactivated.
-            // foreach (GameObject go in sequenceController.sequenceEvent.objectsToDeactivate)
-            // {
-            //     Handles.color = Color.red;
-            //     Handles.DrawAAPolyLine(2, new Vector3[] { sequenceController.transform.position, go.transform.position });
-            //     Gizmos.DrawWireSphere(go.transform.position, 1);
-            // }
-
-            // // Draw a line from the SequenceController to the light that is to be activated.
-            // if (sequenceController.sequenceEvent.light != null)
-            // {
-            //     Handles.color = Color.blue;
-            //     Handles.DrawAAPolyLine(2, new Vector3[] { sequenceController.transform.position, sequenceController.sequenceEvent.light.transform.position });
-            //     Gizmos.DrawWireSphere(sequenceController.sequenceEvent.light.transform.position, 1);
-            // }
-
-            // // Draw a line from the SequenceController to the audio source that is to be played.
-            // if (sequenceController.sequenceEvent.audioSource != null && sequenceController.sequenceEvent.audioClip != null)
-            // {
-            //     Handles.color = Color.cyan;
-            //     Handles.DrawAAPolyLine(2, new Vector3[] { sequenceController.transform.position, sequenceController.sequenceEvent.audioSource.transform.position });
-            //     Gizmos.DrawWireSphere(sequenceController.sequenceEvent.audioSource.transform.position, 1);
-            // }
         }
     }
     #endif

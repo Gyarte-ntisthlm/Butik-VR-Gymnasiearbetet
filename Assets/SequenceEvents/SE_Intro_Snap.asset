@@ -16,12 +16,12 @@ MonoBehaviour:
   delayLightActivation: 0
   delayObjectActivation: 0
   delayObjectDeactivation: 0
-  subtitleDuration: 6
+  subtitleDuration:
+  - 6
   audioClip: {fileID: 8300000, guid: c7372d85577ec3246a129357b61cc105, type: 3}
   subtitles:
   - 'Now, turn your thumbstick left or right to snap turn 45 degrees. '
   audioSource: {fileID: 0}
-  light: {fileID: 0}
-  objectsToActivate: []
-  objectsToDeactivate: []
+  objectsToActivateID: 0
+  objectsToDeactivateID: 0
   eventsToTrigger: []

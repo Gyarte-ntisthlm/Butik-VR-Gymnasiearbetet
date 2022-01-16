@@ -16,13 +16,14 @@ MonoBehaviour:
   delayLightActivation: 0
   delayObjectActivation: 0
   delayObjectDeactivation: 0
-  subtitleDuration: 3
+  subtitleDuration:
+  - 3
+  - 3
   audioClip: {fileID: 8300000, guid: 4a3cfb6e7d45cba48b8908219cc3356d, type: 3}
   subtitles:
   - Grab an object by pressing your grip button.
   - You can let go of an object by releasing your grip.
   audioSource: {fileID: 0}
-  light: {fileID: 0}
-  objectsToActivate: []
-  objectsToDeactivate: []
+  objectsToActivateID: 0
+  objectsToDeactivateID: 0
   eventsToTrigger: []

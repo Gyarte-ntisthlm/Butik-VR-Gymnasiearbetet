@@ -16,7 +16,11 @@ MonoBehaviour:
   delayLightActivation: 0
   delayObjectActivation: 0
   delayObjectDeactivation: 0
-  subtitleDuration: 3
+  subtitleDuration:
+  - 3
+  - 3
+  - 3
+  - 3
   audioClip: {fileID: 8300000, guid: b25178d25d2a25643907648aba5e5dd3, type: 3}
   subtitles:
   - Hello, Welcome to Butik VR.
@@ -24,7 +28,6 @@ MonoBehaviour:
   - Use your thumbstick to initiate teleportation,
   - let go of the thumbstick when you wish to teleport.
   audioSource: {fileID: 0}
-  light: {fileID: 0}
-  objectsToActivate: []
-  objectsToDeactivate: []
+  objectsToActivateID: 0
+  objectsToDeactivateID: 0
   eventsToTrigger: []

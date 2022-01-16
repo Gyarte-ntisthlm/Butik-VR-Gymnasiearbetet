@@ -16,13 +16,14 @@ MonoBehaviour:
   delayLightActivation: 0
   delayObjectActivation: 0
   delayObjectDeactivation: 0
-  subtitleDuration: 3
+  subtitleDuration:
+  - 3
+  - 3
   audioClip: {fileID: 8300000, guid: 9496cc9c9194de14e8f8bde98ade6429, type: 3}
   subtitles:
   - You are all done for this part.
   - Proceeding...
   audioSource: {fileID: 0}
-  light: {fileID: 0}
-  objectsToActivate: []
-  objectsToDeactivate: []
+  objectsToActivateID: 0
+  objectsToDeactivateID: 0
   eventsToTrigger: []

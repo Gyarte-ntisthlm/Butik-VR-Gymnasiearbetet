@@ -24,23 +24,22 @@ public class SequenceEvent : ScriptableObject
     public float delayObjectDeactivation;
 
     [Tooltip("This is for how long each subtitle should be displayed.")]
-    [Range(3, 30)]
-    public float subtitleDuration;
+    [Range(1, 30)]
+    public float[] subtitleDuration;
 
     [Space]
 
     public AudioClip audioClip;
-    public List<string> subtitles;
+    public string[] subtitles;
 
     [Space]
 
     public AudioSource audioSource;
-    public Light light;
-    public List<GameObject> objectsToActivate;
-    public List<GameObject> objectsToDeactivate;
+    public int objectsToActivateID;
+    public int objectsToDeactivateID;
 
     [Space]
     [Tooltip("GameManager events to trigger. If left empty will not trigger any events.")]
     //public List<string> eventsToTrigger;
-    public List<string> eventsToTrigger;
+    public string[] eventsToTrigger;
 }

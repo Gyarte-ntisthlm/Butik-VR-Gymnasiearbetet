@@ -16,7 +16,11 @@ MonoBehaviour:
   delayLightActivation: 0
   delayObjectActivation: 0
   delayObjectDeactivation: 0
-  subtitleDuration: 3
+  subtitleDuration:
+  - 3
+  - 3
+  - 5
+  - 4
   audioClip: {fileID: 8300000, guid: be52eede51fbf9b4cadf8c57ca7f0ef9, type: 3}
   subtitles:
   - Thank you for participating in Butik VR.
@@ -24,7 +28,6 @@ MonoBehaviour:
   - answer the questions in the questionnaire opened on your desktop.
   - Thank You.
   audioSource: {fileID: 0}
-  light: {fileID: 0}
-  objectsToActivate: []
-  objectsToDeactivate: []
+  objectsToActivateID: 0
+  objectsToDeactivateID: 0
   eventsToTrigger: []
