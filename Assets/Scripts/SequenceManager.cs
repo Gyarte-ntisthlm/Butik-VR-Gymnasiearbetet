@@ -111,7 +111,6 @@ public class SequenceManager : MonoBehaviour
 
     IEnumerator ActivateGameObjects(SequenceEvent sequenceEvent)
     {
-
         // Wait for delay.
         yield return new WaitForSeconds(sequenceEvent.delayObjectActivation);
 
@@ -122,8 +121,6 @@ public class SequenceManager : MonoBehaviour
                 sc.gameObject.SetActive(true);
             }
         }
-
-
     }
 
     IEnumerator DeactivateGameObjects(SequenceEvent sequenceEvent)
@@ -142,7 +139,6 @@ public class SequenceManager : MonoBehaviour
                 sc.gameObject.SetActive(false);
             }
         }
-
     }
 
     IEnumerator IsPlayingTimer()
