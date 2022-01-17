@@ -28,3 +28,4 @@ MonoBehaviour:
   objectsToDeactivateID: 0
   eventsToTrigger:
   - OnActivateDoor
+  - OnDecideOrder
