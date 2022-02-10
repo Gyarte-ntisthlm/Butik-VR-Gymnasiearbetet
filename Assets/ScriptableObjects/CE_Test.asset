@@ -17,4 +17,6 @@ MonoBehaviour:
   bottomText: 
   bottomImage: {fileID: 0}
   audioClip: {fileID: 0}
-  extaButtons: []
+  extaButtonImages: []
+  extraButtonTexts: []
+  extraButtonEvents: []

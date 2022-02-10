@@ -2609,6 +2609,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1732675967, guid: 92dcf4585bc89694897a7699d7263768, type: 3}
+      propertyPath: m_Name
+      value: TopCanvas
+      objectReference: {fileID: 0}
     - target: {fileID: 1732675968, guid: 92dcf4585bc89694897a7699d7263768, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0.0064
@@ -2663,6 +2667,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92dcf4585bc89694897a7699d7263768, type: 3}
+--- !u!1 &5142167766412717026 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5448739303976802318, guid: 92dcf4585bc89694897a7699d7263768, type: 3}
+  m_PrefabInstance: {fileID: 5142167766412717025}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5142167766412717027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5142167766412717026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c62c91d400183db49adbeaac1201a308, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  consoleEvents: []
 --- !u!1001 &5802998400462149978
 PrefabInstance:
   m_ObjectHideFlags: 0
