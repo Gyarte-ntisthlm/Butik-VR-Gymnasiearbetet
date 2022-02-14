@@ -23,13 +23,24 @@ public class ConsoleController : MonoBehaviour
 
     public void Start()
     {
-        consoleUpperImage = GameObject.Find("ConsoleUpperImage").GetComponent<TextMeshProUGUI>();
-        consoleUpperText = GameObject.Find("ConsoleUpperText").GetComponent<TextMeshProUGUI>();
-
-        consoleLowerImage = GameObject.Find("ConsoleLowerImage").GetComponent<TextMeshProUGUI>();
-        consoleLowerText = GameObject.Find("ConsoleLowerText").GetComponent<TextMeshProUGUI>();
+        // // Find the text mesh pro gui elements that are children of this object
+        // consoleUpperText = transform.Find("ConsoleUpperText").GetComponent<TextMeshProUGUI>();
+        // consoleLowerText = transform.Find("ConsoleLowerText").GetComponent<TextMeshProUGUI>();
+        // consoleLowerImage = transform.Find("ConsoleLowerImage").GetComponent<TextMeshProUGUI>();
+        // consoleUpperImage = transform.Find("ConsoleUpperImage").GetComponent<TextMeshProUGUI>();
+    
+        // // Set the text to empty
+        // consoleUpperText.text = "";
+        // consoleLowerText.text = "";
+        
     }
 
+    private void ClearScreen()
+    {
+        consoleUpperText.text = "";
+        consoleLowerText.text = "";
+        consoleUpperImage.text = "";
+    }
 
     public void ExecuteNextEvent()
     {
