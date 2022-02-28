@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "866478350237",
+    "firebase_url": "https://butik-vr-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "butik-vr",
+    "storage_bucket": "butik-vr.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:866478350237:android:ebf03c1e4fa59da50ed974",
+        "android_client_info": {
+          "package_name": "com.Gymnasiearbetet.ButikVR"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "866478350237-fb3gt0gscqgiqeijcb5u4jp0b9cijilr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4Rau617buJjxlP2dqVV-YJXSIC4gx9Bw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "866478350237-fb3gt0gscqgiqeijcb5u4jp0b9cijilr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -98,9 +98,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6182926955489832469}
   - component: {fileID: 6182926955489832471}
-  - component: {fileID: 6182926955489832468}
   - component: {fileID: 6182926955489832473}
   - component: {fileID: 6182926955489832470}
+  - component: {fileID: 1400638859708879182}
   m_Layer: 0
   m_Name: Analytics Manager
   m_TagString: Untagged
@@ -135,18 +135,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefix: Dev
---- !u!114 &6182926955489832468
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6182926955489832466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26ef03935c8c2944393a5915ba1a17b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6182926955489832473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,6 +161,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefix: B
+--- !u!114 &1400638859708879182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6182926955489832466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26ef03935c8c2944393a5915ba1a17b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6182926955716831233
 GameObject:
   m_ObjectHideFlags: 0
