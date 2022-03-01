@@ -128,8 +128,8 @@ public class QuestionnaireManager : MonoBehaviour
             { "secret", secret },
             { "base64url", base64url },
             { "build", Application.version },
-            { "localTime", Time.time },
-            {"collectedData", GetAnalyticsData()}
+            { "timeSinceStart", Time.realtimeSinceStartup },
+            { "collectedData", GetAnalyticsData()}
         };
 
         docRef.SetAsync(userData).ContinueWith(task => {
