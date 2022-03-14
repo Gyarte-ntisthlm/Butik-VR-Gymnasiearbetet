@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SG_Liquid
+  m_Name: SG_Liquid_red
   m_Shader: {fileID: -6465566751694194690, guid: a710e151fb149c34e9886b7b41dad52b, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -36,6 +36,6 @@ Material:
     - _WobbleX: 0
     - _WobbleZ: 0
     m_Colors:
-    - _SideColor: {r: 0, g: 136.45868, b: 164.22644, a: 0}
-    - _TopColor: {r: 39.097195, g: 212.52832, b: 196.6508, a: 0}
+    - _SideColor: {r: 3.0314326, g: 0, b: 0.058177028, a: 0}
+    - _TopColor: {r: 11.181761, g: 2.466528, b: 2.107557, a: 0}
   m_BuildTextureStacks: []
