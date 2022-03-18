@@ -40,7 +40,7 @@ Material:
     - EdgeWidth_: 0.24
     - NoiseStr_: 1
     - Noise_: 60
-    - _CutOfHight: -5.000033
+    - _CutOfHight: -5
     - _CuttofHight: -5
     m_Colors:
     - EdgeColor_: {r: 0, g: 766.9961, b: 0, a: 1}
