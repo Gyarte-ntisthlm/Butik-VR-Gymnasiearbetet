@@ -23,7 +23,8 @@ public class QuestionnaireManager : MonoBehaviour
 
     private string id = "";
     private string secret = "";
-    private string base64url = "";
+    private string baseSecret = "";
+    private string baseId = "";
 
     // Start is called before the first frame update
     void Start()
@@ -52,7 +53,7 @@ public class QuestionnaireManager : MonoBehaviour
 
     private void questionnaireOrder(){
         Register();
-        Application.OpenURL($"https:qna-butik-vr.web.app/{base64url}");
+        Application.OpenURL($"https:qna-butik-vr.web.app/{baseId}/{baseSecret}");
     }
 
     private void InitializeFirebase(){
@@ -72,9 +73,10 @@ public class QuestionnaireManager : MonoBehaviour
 
         // Generate the url safe base64 hash from the combined string of id and secret, this is sent to the questionnaire and
         // is converted back into text that can be used to verify the user.
-        base64url = Base64UrlEncode($"{id}:{secret}");
+        baseId = Base64UrlEncode(id);
+        baseSecret = Base64UrlEncode(secret);
 
-        Debug.Log($"id: {id}, secret: {secret}, base64url: {base64url}");
+        Debug.Log($"id: {id}, secret: {secret}, base64url: {baseId}/{baseSecret}");
 
         StartCoroutine("RegisterCoroutine");
     }
@@ -97,15 +99,8 @@ public class QuestionnaireManager : MonoBehaviour
             {
                 DisplayName = id
             }).ContinueWith(task => {
-                if (task.IsCompleted)
-                {
-                    Debug.Log("User profile updated successfully");
-
-                }
-                else
-                {
-                    Debug.Log("User profile update failed");
-                }
+                if (task.IsCompleted) Debug.Log("User profile updated successfully");
+                else Debug.Log("User profile update failed");
             });
             
             CreateDatabaseEntry();
@@ -126,7 +121,8 @@ public class QuestionnaireManager : MonoBehaviour
         {
             { "id", id },
             { "secret", secret },
-            { "base64url", base64url },
+            { "baseId", baseId },
+            { "baseSecret", baseSecret },
             { "build", Application.version },
             { "timeSinceStart", Time.realtimeSinceStartup },
             { "collectedData", GetAnalyticsData()}
@@ -161,10 +157,11 @@ public class QuestionnaireManager : MonoBehaviour
             Dictionary<string, object> temp = new Dictionary<string, object>();
 
             // Manually deserialize the data, 'cause yes.
-            temp.Add("prefix", args[i].prefix);
+            temp.Add("Prefix", args[i].prefix);
             temp.Add("PurchaseBegin", args[i].PurchaseBegin);
             temp.Add("PurchaseCompleted", args[i].PurchaseCompleted);
             temp.Add("SceneCompleted", args[i].SceneCompleted);
+            temp.Add("Rating", args[i].Rating);
 
             data.Add(args[i].prefix, temp);
         }

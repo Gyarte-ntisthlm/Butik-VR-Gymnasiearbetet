@@ -98,5 +98,6 @@ public class AnalyticsData
     public float PurchaseBegin;
     public float PurchaseCompleted;
     public float SceneCompleted;
+    public int Rating;
 
 }
