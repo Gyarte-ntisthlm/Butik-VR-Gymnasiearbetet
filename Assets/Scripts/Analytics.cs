@@ -36,6 +36,11 @@ public class Analytics : MonoBehaviour
         GameManager.instance.onPurchaseCompleted += OnPurchaseCompleted;
     }
 
+    private void Awake() {
+        if(Directory.Exists(Application.persistentDataPath)) return;
+        Directory.CreateDirectory(Application.persistentDataPath);
+    }
+
     private void OnDestroy()
     {
         // General events

@@ -4,10 +4,19 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    public string order = "int-gui";
 
     private void Awake()
     {
         instance = this;
+        DontDestroyOnLoad(this);
+        order = DetermainOrder();
+    }
+
+    private static string DetermainOrder(){
+        System.Random rnd = new System.Random();
+        int r = rnd.Next(0, 2);
+        return r == 0 ? "int-gui" : "gui-int";
     }
 
     // Purchase events

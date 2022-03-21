@@ -124,7 +124,7 @@ public class QuestionnaireManager : MonoBehaviour
             { "baseId", baseId },
             { "baseSecret", baseSecret },
             { "timestamp", DateTime.Now.ToString() },
-            { "order", "int-gui"}, // TODO: Change this so that it uses the actual order that the player played through, it could possibly be handled by a scriptable object or the like.
+            { "order", GameManager.instance.order},
             { "build", Application.version },
             { "timeSinceStart", Time.realtimeSinceStartup },
             { "collectedData", GetAnalyticsData()}
