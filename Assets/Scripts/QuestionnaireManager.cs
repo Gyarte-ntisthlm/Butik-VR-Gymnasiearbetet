@@ -123,6 +123,8 @@ public class QuestionnaireManager : MonoBehaviour
             { "secret", secret },
             { "baseId", baseId },
             { "baseSecret", baseSecret },
+            { "timestamp", DateTime.Now.ToString() },
+            { "order", "int-gui"}, // TODO: Change this so that it uses the actual order that the player played through, it could possibly be handled by a scriptable object or the like.
             { "build", Application.version },
             { "timeSinceStart", Time.realtimeSinceStartup },
             { "collectedData", GetAnalyticsData()}
@@ -162,6 +164,7 @@ public class QuestionnaireManager : MonoBehaviour
             temp.Add("PurchaseCompleted", args[i].PurchaseCompleted);
             temp.Add("SceneCompleted", args[i].SceneCompleted);
             temp.Add("Rating", args[i].Rating);
+            temp.Add("Title", args[i].title);
 
             data.Add(args[i].prefix, temp);
         }

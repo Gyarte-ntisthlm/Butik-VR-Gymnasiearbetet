@@ -12,6 +12,7 @@ using UnityEngine;
 public class Analytics : MonoBehaviour
 {
     public string prefix = "";
+    public string title = "";
 
     string path;
 
@@ -72,6 +73,7 @@ public class Analytics : MonoBehaviour
         // Save the timestamp
         analyticsData.SceneCompleted = Time.timeSinceLevelLoad;
         analyticsData.prefix = prefix;
+        analyticsData.title = title;
 
         Save(analyticsData);
     }
@@ -95,6 +97,7 @@ public class AnalyticsData
     // in the format: { "event_name": time_since_game_started }
 
     public string prefix = "";
+    public string title = ""; // Essentially the same as the prefix, but for the questionnaire 
     public float PurchaseBegin;
     public float PurchaseCompleted;
     public float SceneCompleted;

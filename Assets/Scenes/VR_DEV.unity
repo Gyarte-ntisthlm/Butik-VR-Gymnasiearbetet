@@ -2537,6 +2537,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6182926955489832470, guid: c7e79796189308947950569df9871845, type: 3}
+      propertyPath: title
+      value: GUI / Billboard
+      objectReference: {fileID: 0}
+    - target: {fileID: 6182926955489832470, guid: c7e79796189308947950569df9871845, type: 3}
+      propertyPath: prefix
+      value: guiRoom
+      objectReference: {fileID: 0}
+    - target: {fileID: 6182926955489832471, guid: c7e79796189308947950569df9871845, type: 3}
+      propertyPath: title
+      value: Interactive / Realistic
+      objectReference: {fileID: 0}
+    - target: {fileID: 6182926955489832471, guid: c7e79796189308947950569df9871845, type: 3}
+      propertyPath: prefix
+      value: interactiveRoom
+      objectReference: {fileID: 0}
+    - target: {fileID: 6182926955489832473, guid: c7e79796189308947950569df9871845, type: 3}
+      propertyPath: title
+      value: Mixed
+      objectReference: {fileID: 0}
+    - target: {fileID: 6182926955489832473, guid: c7e79796189308947950569df9871845, type: 3}
+      propertyPath: prefix
+      value: mixedRoom
+      objectReference: {fileID: 0}
     - target: {fileID: 6182926955716831235, guid: c7e79796189308947950569df9871845, type: 3}
       propertyPath: subtitleText
       value: 
