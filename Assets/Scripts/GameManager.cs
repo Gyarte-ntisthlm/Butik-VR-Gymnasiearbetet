@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
 
     private static string DetermainOrder(){
         System.Random rnd = new System.Random();
-        int r = rnd.Next(0, 2);
+        int r = rnd.Next(0, 1);
         return r == 0 ? "int-gui" : "gui-int";
     }
 

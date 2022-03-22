@@ -62,11 +62,12 @@ public class QuestionnaireManager : MonoBehaviour
 
     private void Register()
     {
-        System.Random rng = new System.Random();
-
         // Randomize the user id and secret
         // id is used as the email in the sign up process, format: yMAsQAk1hhg@butik.vr
-        id = $"{Base64UrlEncode(rng.Next(0, 100000).ToString())}@butik.vr";
+        
+        // The id is the unix time stamp of the current tim in milliseconds, 
+        // this effectively eliminates the risk of duplicates compared to the old system.
+        id = $"{Base64UrlEncode(((DateTimeOffset)DateTime.Now.ToUniversalTime()).ToUnixTimeMilliseconds().ToString())}@butik.vr";
         
         // The secret is the base64 encoded timestamp
         secret = Base64UrlEncode(DateTime.Now.ToString());
@@ -123,7 +124,7 @@ public class QuestionnaireManager : MonoBehaviour
             { "secret", secret },
             { "baseId", baseId },
             { "baseSecret", baseSecret },
-            { "timestamp", DateTime.Now.ToString() },
+            { "gameCompleted", DateTime.Now.ToUniversalTime().ToString() },
             { "order", GameManager.instance.order},
             { "build", Application.version },
             { "timeSinceStart", Time.realtimeSinceStartup },
@@ -164,7 +165,6 @@ public class QuestionnaireManager : MonoBehaviour
             temp.Add("PurchaseCompleted", args[i].PurchaseCompleted);
             temp.Add("SceneCompleted", args[i].SceneCompleted);
             temp.Add("Rating", args[i].Rating);
-            temp.Add("Title", args[i].title);
 
             data.Add(args[i].prefix, temp);
         }
