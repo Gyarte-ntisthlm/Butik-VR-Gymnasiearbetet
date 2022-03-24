@@ -34,7 +34,6 @@ public class GameManager : MonoBehaviour
     public event Action onReset;
 
     public event Action onActivateDoor;
-    public event Action onDecideOrder;
 
     // Purchase events.
     public void OnPurchaseBegin() => onPurchaseBegin?.Invoke();
@@ -49,6 +48,5 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void OnSceneCompleted() => onSceneCompleted?.Invoke();
     public void OnActivateDoor() => onActivateDoor?.Invoke();
-    public void OnDecideOrder() => onDecideOrder?.Invoke();
     public void OnReset() => onReset?.Invoke();
 }
