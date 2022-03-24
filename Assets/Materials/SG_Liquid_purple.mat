@@ -32,10 +32,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Fill: 0.8
+    - _Fill: 0.64
     - _WobbleX: 0
     - _WobbleZ: 0
     m_Colors:
-    - _SideColor: {r: 13.132209, g: 0, b: 5.7754216, a: 0}
-    - _TopColor: {r: 12.996038, g: 0.45868373, b: 8.409202, a: 0}
+    - _SideColor: {r: 5.992157, g: 0, b: 2.6352942, a: 0}
+    - _TopColor: {r: 11.984314, g: 0.4392157, b: 7.780392, a: 0}
   m_BuildTextureStacks: []
