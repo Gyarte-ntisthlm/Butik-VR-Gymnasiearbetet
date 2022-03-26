@@ -4,15 +4,6 @@ using UnityEngine;
 
 public class HeadIKPointOfINtrest : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    // This is only here so that the HeadTracking script has something to track, this could have just ben a tag but eh.
+    // ¯\_(ツ)_/¯ 
 }
