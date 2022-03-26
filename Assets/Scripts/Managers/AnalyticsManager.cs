@@ -7,11 +7,11 @@ using Firebase;
 using Firebase.Auth;
 using Firebase.Firestore;
 
-public class QuestionnaireManager : MonoBehaviour
+public class AnalyticsManager : MonoBehaviour
 {
 
     // Event stuff
-    public static QuestionnaireManager instance;
+    public static AnalyticsManager instance;
     public event Action onQuestionnaireLaunched;
     public void LaunchQuestionnaire() => onQuestionnaireLaunched?.Invoke();
 
@@ -190,7 +190,7 @@ public class QuestionnaireManager : MonoBehaviour
         return JsonUtility.FromJson<AnalyticsData>(data);
     }
 
-    // Creates a URL safe encoding, just have to make sure that the string is parsed correctly on the front end.
+    // Creates a URL safe encoding
     private string Base64UrlEncode(string input) {
         var inputBytes = System.Text.Encoding.UTF8.GetBytes(input);
         // Special "url-safe" base64 encode.

@@ -9,7 +9,7 @@ using System;
 using System.IO;
 using UnityEngine;
 
-public class Analytics : MonoBehaviour
+public class AnalyticsController : MonoBehaviour
 {
     public string prefix = "";
     public string title = "";

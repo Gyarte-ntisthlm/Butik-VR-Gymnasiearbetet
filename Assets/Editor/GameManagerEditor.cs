@@ -93,7 +93,7 @@ public class GameManagerEditor : EditorWindow
         GUILayout.Label("Launch Questionnaire", EditorStyles.boldLabel);
         if (GUILayout.Button("Launch Questionnaire"))
         {
-            QuestionnaireManager.instance.LaunchQuestionnaire();
+            AnalyticsManager.instance.LaunchQuestionnaire();
         }
         GUILayout.EndVertical();
     }
