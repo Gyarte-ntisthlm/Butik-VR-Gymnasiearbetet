@@ -517,7 +517,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6783639635998948135, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
   m_PrefabInstance: {fileID: 6999493589634644064}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1094559205
+--- !u!114 &1094559203
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -526,11 +526,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1094559202}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f2ff3cc7d9c83241a690900a83741a8, type: 3}
+  m_Script: {fileID: 11500000, guid: 07c7514b67e4db04d9d82c5a16580eb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controllerActionGrip: {fileID: 187161793506945269, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  controllerActionTrigger: {fileID: 0}
+  baseControllerGameObject: {fileID: 0}
+  teleportationGameObject: {fileID: 0}
+  teleportActionRef: {fileID: 0}
+  onTeleportActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  onTeleportCancel:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1107385101
 GameObject:
   m_ObjectHideFlags: 0
@@ -797,17 +804,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1846504514 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6182926954996029373, guid: c7e79796189308947950569df9871845, type: 3}
-  m_PrefabInstance: {fileID: 6182926956434186641}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c10e37c8240dc3444b2d55030fcf3ee3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1852923700
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1211,22 +1207,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -4884637486010164378, guid: 17e1853e79493e349b62d6516caf4cee, type: 3}
-      propertyPath: m_Height
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -4884637486010164378, guid: 17e1853e79493e349b62d6516caf4cee, type: 3}
-      propertyPath: m_Radius
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: -4884637486010164378, guid: 17e1853e79493e349b62d6516caf4cee, type: 3}
-      propertyPath: m_Center.y
-      value: 0.82
-      objectReference: {fileID: 0}
-    - target: {fileID: -4884637486010164378, guid: 17e1853e79493e349b62d6516caf4cee, type: 3}
-      propertyPath: m_Center.z
-      value: -0.05
-      objectReference: {fileID: 0}
     - target: {fileID: 2639765305597704822, guid: 17e1853e79493e349b62d6516caf4cee, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1965,7 +1945,7 @@ PrefabInstance:
     - target: {fileID: 8583560345139495097, guid: 719e854befd037a40ad7c7b47023af0e, type: 3}
       propertyPath: OnDoorOpen.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1846504514}
+      objectReference: {fileID: 0}
     - target: {fileID: 8711429306659708789, guid: 719e854befd037a40ad7c7b47023af0e, type: 3}
       propertyPath: m_Name
       value: Door
