@@ -76,27 +76,31 @@ public class TeleportationManager : MonoBehaviour
         if(!isActivate) return;
 
         // If both the controllers are centered, it means that the player don't want to teleport anymore.
-        if(thumbstickRight.action.triggered && thumbstickLeft.action.triggered) return;
+        if(thumbstickLeft.action.ReadValue<Vector2>() != Vector2.zero) return;
 
-        if(!xrRayInteractorLeft.TryGetCurrent3DRaycastHit(out RaycastHit hitLeft) || !xrRayInteractorRight.TryGetCurrent3DRaycastHit(out RaycastHit hitRight))
+        if(!xrRayInteractorLeft.TryGetCurrent3DRaycastHit(out RaycastHit hitLeft))
         {
             isActivate = false;
             onTeleportationCanceled.Invoke();
             xrRayInteractorLeft.enabled = false;
-            xrRayInteractorLeft.enabled = false;
+            xrRayInteractorRight.enabled = false;
             return;
         }
-
 
         // Invoke the teleportation events
         onTeleportationActivated.Invoke();
 
         // Teleport the player to the hit position
         TeleportRequest teleportRequest = new TeleportRequest(){
-            destinationPosition = hitLeft.point == null ? hitLeft.point : hitRight.point,
+            // destinationPosition = hitLeft.point == null ? hitLeft.point : hitRight.point,
+            destinationPosition = hitLeft.point
         };
 
         teleportationProvider.QueueTeleportRequest(teleportRequest);
+
+        isActivate = false;
+        xrRayInteractorLeft.enabled = false;
+        xrRayInteractorRight.enabled = false;
     }
 
     private void OnActivateTeleportationRight(InputAction.CallbackContext context)
@@ -120,7 +124,7 @@ public class TeleportationManager : MonoBehaviour
     private void OnActivateTeleportationLeft(InputAction.CallbackContext context)
     {
         // Enable the ray interactor
-        xrRayInteractorRight.enabled = true;
+        xrRayInteractorLeft.enabled = true;
 
         // Set the flag
         isActivate = true;
@@ -129,7 +133,7 @@ public class TeleportationManager : MonoBehaviour
     private void OnCancelTeleportationLeft(InputAction.CallbackContext context)
     {
         // Disable the ray interactor
-        xrRayInteractorRight.enabled = false;
+        xrRayInteractorLeft.enabled = false;
 
         // Set the flag
         isActivate = false;
