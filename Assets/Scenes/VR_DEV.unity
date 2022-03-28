@@ -1819,6 +1819,126 @@ PrefabInstance:
       propertyPath: onTeleportationActivated.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1155784619, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_LineType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155784619, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_Velocity
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155784619, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_RaycastMask.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155784619, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_HapticSelectExitIntensity
+      value: 0.021
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155784619, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_PlayHapticsOnSelectExited
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155784619, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_PlayHapticsOnSelectEntered
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155784620, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_Reticle
+      value: 
+      objectReference: {fileID: 3686050460246653115, guid: 487f74cb8d94864409a2d92990d9e729, type: 3}
+    - target: {fileID: 1155784620, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_SmoothMovement
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155784620, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_ValidColorGradient.key0.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155784620, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_ValidColorGradient.key0.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155784620, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_ValidColorGradient.key0.r
+      value: 0.022114277
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155784620, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_ValidColorGradient.key1.a
+      value: 0.60784316
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155784620, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_ValidColorGradient.key1.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155784620, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_ValidColorGradient.key1.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155784620, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_ValidColorGradient.key1.r
+      value: 0.0610013
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155784620, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_InvalidColorGradient.key1.a
+      value: 0.60784316
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155784620, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_WidthCurve.m_Curve.Array.data[1].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155784620, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_WidthCurve.m_Curve.Array.data[1].value
+      value: 0.9495239
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768354481, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_Reticle
+      value: 
+      objectReference: {fileID: 3686050460246653115, guid: 487f74cb8d94864409a2d92990d9e729, type: 3}
+    - target: {fileID: 1768354481, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_SmoothMovement
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768354481, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_ValidColorGradient.key0.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768354481, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_ValidColorGradient.key0.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768354481, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_ValidColorGradient.key0.r
+      value: 0.022114277
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768354481, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_ValidColorGradient.key1.a
+      value: 0.60784316
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768354481, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_ValidColorGradient.key1.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768354481, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_ValidColorGradient.key1.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768354481, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_ValidColorGradient.key1.r
+      value: 0.0610013
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768354481, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_InvalidColorGradient.key1.a
+      value: 0.60784316
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768354481, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_WidthCurve.m_Curve.Array.data[1].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768354481, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_WidthCurve.m_Curve.Array.data[1].value
+      value: 0.9495239
+      objectReference: {fileID: 0}
     - target: {fileID: 1768354483, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
       propertyPath: m_SelectAction.m_Reference
       value: 
@@ -1867,6 +1987,30 @@ PrefabInstance:
       propertyPath: m_TranslateAnchorAction.m_Reference
       value: 
       objectReference: {fileID: 875253871413052681, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+    - target: {fileID: 1768354484, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_LineType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768354484, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_Velocity
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768354484, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_RaycastMask.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768354484, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_HapticSelectExitIntensity
+      value: 0.021
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768354484, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_PlayHapticsOnSelectExited
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768354484, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_PlayHapticsOnSelectEntered
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6999493590268574325, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
       propertyPath: m_Name
       value: XR
