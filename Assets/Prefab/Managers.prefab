@@ -54,10 +54,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6182926955489832469}
-  - component: {fileID: 6182926955489832471}
-  - component: {fileID: 6182926955489832473}
-  - component: {fileID: 6182926955489832470}
-  - component: {fileID: 1400638859708879182}
+  - component: {fileID: 1968400441}
+  - component: {fileID: 1968400442}
+  - component: {fileID: 1968400443}
+  - component: {fileID: 1968400444}
   m_Layer: 0
   m_Name: Analytics Manager
   m_TagString: Untagged
@@ -79,35 +79,7 @@ Transform:
   m_Father: {fileID: 6182926956370676031}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6182926955489832471
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6182926955489832466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02d4ab5d3bbbb964c8054e100e36fb77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefix: guiRoom
-  title: 
---- !u!114 &6182926955489832473
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6182926955489832466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02d4ab5d3bbbb964c8054e100e36fb77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefix: mixedRoom
-  title: 
---- !u!114 &6182926955489832470
+--- !u!114 &1968400441
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -120,8 +92,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefix: interactiveRoom
-  title: 
---- !u!114 &1400638859708879182
+--- !u!114 &1968400442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6182926955489832466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d4ab5d3bbbb964c8054e100e36fb77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefix: guiRoom
+--- !u!114 &1968400443
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,6 +117,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b5e0798ddd1b7f448bcd48494a57799, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1968400444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6182926955489832466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d4ab5d3bbbb964c8054e100e36fb77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefix: mixedRoom
 --- !u!1 &6182926955818658694
 GameObject:
   m_ObjectHideFlags: 0

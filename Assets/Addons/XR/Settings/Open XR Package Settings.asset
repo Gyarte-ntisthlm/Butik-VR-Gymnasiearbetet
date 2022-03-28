@@ -443,5 +443,5 @@ MonoBehaviour:
   - {fileID: 2733084453009010348}
   - {fileID: -7614139552854157700}
   - {fileID: 3347503254015217913}
-  m_renderMode: 1
+  m_renderMode: 0
   m_depthSubmissionMode: 0

@@ -12,7 +12,6 @@ using UnityEngine;
 public class AnalyticsController : MonoBehaviour
 {
     public string prefix = "";
-    public string title = "";
 
     string path;
 
@@ -41,18 +40,6 @@ public class AnalyticsController : MonoBehaviour
         Directory.CreateDirectory(Application.persistentDataPath);
     }
 
-    private void OnDestroy()
-    {
-        // General events
-        GameManager.instance.onSceneCompleted -= OnSceneCompleted;
-        GameManager.instance.onReset -= OnReset;
-        GameManager.instance.onEvalCompleted -= OnEvalCompleted;
-
-        // Purchase events
-        GameManager.instance.onPurchaseBegin -= OnPurchaseBegin;
-        GameManager.instance.onPurchaseCompleted -= OnPurchaseCompleted;
-    }
-
     private void OnPurchaseCompleted()
     {
         // Save the timestamp
@@ -78,7 +65,6 @@ public class AnalyticsController : MonoBehaviour
         // Save the timestamp
         analyticsData.SceneCompleted = Time.timeSinceLevelLoad;
         analyticsData.prefix = prefix;
-        analyticsData.title = title;
 
         Save(analyticsData);
     }
@@ -102,7 +88,6 @@ public class AnalyticsData
     // in the format: { "event_name": time_since_game_started }
 
     public string prefix = "";
-    public string title = ""; // Essentially the same as the prefix, but for the questionnaire 
     public float PurchaseBegin;
     public float PurchaseCompleted;
     public float SceneCompleted;

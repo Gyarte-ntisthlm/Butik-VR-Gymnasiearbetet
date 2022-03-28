@@ -138,5 +138,4 @@ public class TeleportationManager : MonoBehaviour
         // Set the flag
         isActivate = false;
     }
-
 }
