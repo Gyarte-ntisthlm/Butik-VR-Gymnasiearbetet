@@ -244,6 +244,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9758da7b99d79248a905c642eff381b, type: 3}
+--- !u!114 &464892909 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 464892909, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+  m_PrefabInstance: {fileID: 6999493589634644064}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6803edce0201f574f923fd9d10e5b30a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &484932125
 GameObject:
   m_ObjectHideFlags: 0
@@ -778,6 +789,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1732597283 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1732597283, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+  m_PrefabInstance: {fileID: 6999493589634644064}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6803edce0201f574f923fd9d10e5b30a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1852923700
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1733,6 +1755,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 830025434, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: xrRayInteractorLeft
+      value: 
+      objectReference: {fileID: 464892909}
+    - target: {fileID: 830025434, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: xrRayInteractorRight
+      value: 
+      objectReference: {fileID: 1732597283}
     - target: {fileID: 6999493590268574325, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
       propertyPath: m_Name
       value: XR
