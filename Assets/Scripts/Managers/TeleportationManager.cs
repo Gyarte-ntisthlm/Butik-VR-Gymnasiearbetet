@@ -69,38 +69,79 @@ public class TeleportationManager : MonoBehaviour
         cancelTeleportationActionLeft.action.performed -= OnCancelTeleportationLeft;
     }
 
-    private bool isActivate = false;
+    private bool isActiveRight = false;
+    private bool isActiveLeft = false;
     private void Update()
     {
-        // Guards go brrrr.
-        if(!isActivate) return;
+        StartCoroutine(HandleTeleportationLeft());
+        StartCoroutine(HandleTeleportationRight());
+    }
 
+
+    private IEnumerator HandleTeleportationRight()
+    {  
+        if(!isActiveRight) yield break;
+        
         // If both the controllers are centered, it means that the player don't want to teleport anymore.
-        if(thumbstickLeft.action.ReadValue<Vector2>() != Vector2.zero) return;
+        if(thumbstickRight.action.ReadValue<Vector2>() != Vector2.zero) yield break;
 
-        if(!xrRayInteractorLeft.TryGetCurrent3DRaycastHit(out RaycastHit hitLeft))
+        if(!xrRayInteractorRight.TryGetCurrent3DRaycastHit(out RaycastHit hit))
         {
-            isActivate = false;
+            isActiveRight = false;
             onTeleportationCanceled.Invoke();
-            xrRayInteractorLeft.enabled = false;
             xrRayInteractorRight.enabled = false;
-            return;
+            yield break;
         }
 
-        // Invoke the teleportation events
-        onTeleportationActivated.Invoke();
 
         // Teleport the player to the hit position
         TeleportRequest teleportRequest = new TeleportRequest(){
             // destinationPosition = hitLeft.point == null ? hitLeft.point : hitRight.point,
-            destinationPosition = hitLeft.point
+            destinationPosition = hit.point
         };
 
         teleportationProvider.QueueTeleportRequest(teleportRequest);
+        
+        // Invoke the teleportation events
+        onTeleportationActivated.Invoke();
 
-        isActivate = false;
-        xrRayInteractorLeft.enabled = false;
+        isActiveRight = false;
         xrRayInteractorRight.enabled = false;
+
+        yield break;
+    }
+
+    private IEnumerator HandleTeleportationLeft()
+    {  
+        if(!isActiveLeft) yield break;
+        
+        // If both the controllers are centered, it means that the player don't want to teleport anymore.
+        if(thumbstickLeft.action.ReadValue<Vector2>() != Vector2.zero) yield break;
+
+        if(!xrRayInteractorRight.TryGetCurrent3DRaycastHit(out RaycastHit hit))
+        {
+            isActiveLeft = false;
+            onTeleportationCanceled.Invoke();
+            xrRayInteractorLeft.enabled = false;
+            yield break;
+        }
+
+
+        // Teleport the player to the hit position
+        TeleportRequest teleportRequest = new TeleportRequest(){
+            // destinationPosition = hitLeft.point == null ? hitLeft.point : hitRight.point,
+            destinationPosition = hit.point
+        };
+
+        teleportationProvider.QueueTeleportRequest(teleportRequest);
+        
+        // Invoke the teleportation events
+        onTeleportationActivated.Invoke();
+
+        isActiveLeft = false;
+        xrRayInteractorLeft.enabled = false;
+
+        yield break;
     }
 
     private void OnActivateTeleportationRight(InputAction.CallbackContext context)
@@ -109,7 +150,7 @@ public class TeleportationManager : MonoBehaviour
         xrRayInteractorRight.enabled = true;
 
         // Set the flag
-        isActivate = true;
+        isActiveRight = true;
     }
 
     private void OnCancelTeleportationRight(InputAction.CallbackContext context)
@@ -118,7 +159,7 @@ public class TeleportationManager : MonoBehaviour
         xrRayInteractorRight.enabled = false;
 
         // Set the flag
-        isActivate = false;
+        isActiveRight = false;
     }
 
     private void OnActivateTeleportationLeft(InputAction.CallbackContext context)
@@ -127,7 +168,7 @@ public class TeleportationManager : MonoBehaviour
         xrRayInteractorLeft.enabled = true;
 
         // Set the flag
-        isActivate = true;
+        isActiveLeft = true;
     }
 
     private void OnCancelTeleportationLeft(InputAction.CallbackContext context)
@@ -136,7 +177,7 @@ public class TeleportationManager : MonoBehaviour
         xrRayInteractorLeft.enabled = false;
 
         // Set the flag
-        isActivate = false;
+        isActiveLeft = false;
     }
 
 }
