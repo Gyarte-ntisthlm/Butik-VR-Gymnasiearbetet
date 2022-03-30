@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 5305435517333238364}
   - component: {fileID: 2690834172059474230}
   - component: {fileID: 5769591383862384542}
+  - component: {fileID: 7042905588740214996}
   m_Layer: 0
   m_Name: Liquid
   m_TagString: Untagged
@@ -127,6 +128,20 @@ MonoBehaviour:
   MaxWobble: 0.03
   WobbleSpeed: 1
   Recovery: 1
+--- !u!136 &7042905588740214996
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6667863155221555907}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.001
+  m_Height: 0.0019999999
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.0000152395805, z: 2.910383e-10}
 --- !u!1 &6688088552033004225
 GameObject:
   m_ObjectHideFlags: 0
@@ -139,7 +154,6 @@ GameObject:
   - component: {fileID: 6932401175446159326}
   - component: {fileID: 5174672712423377684}
   - component: {fileID: 1331340108199413672}
-  - component: {fileID: 112853536}
   - component: {fileID: 1526414267768809552}
   - component: {fileID: 3681749410015393715}
   m_Layer: 0
@@ -231,20 +245,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &112853536
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6688088552033004225}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.001056863
-  m_Height: 0.0029429835
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.0004192072, z: 1.1641532e-10}
 --- !u!114 &1526414267768809552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -384,6 +384,7 @@ GameObject:
   - component: {fileID: 5636549343393774525}
   - component: {fileID: 6978819216014063269}
   - component: {fileID: 7342124104159050489}
+  - component: {fileID: 5652342984824151776}
   m_Layer: 0
   m_Name: Cork
   m_TagString: Untagged
@@ -454,3 +455,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!136 &5652342984824151776
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7051226610776131469}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.0005
+  m_Height: 0.0014
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.0016020889, z: -2.910383e-11}

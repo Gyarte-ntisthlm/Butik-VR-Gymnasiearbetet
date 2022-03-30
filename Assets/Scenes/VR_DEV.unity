@@ -244,6 +244,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9758da7b99d79248a905c642eff381b, type: 3}
+--- !u!1 &454766768 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6182926956370676028, guid: c7e79796189308947950569df9871845, type: 3}
+  m_PrefabInstance: {fileID: 6182926956434186641}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &454766769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454766768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c10e37c8240dc3444b2d55030fcf3ee3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  order: int-gui
+  currentWorldID: 0
 --- !u!114 &464892909 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 464892909, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
@@ -569,7 +588,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &1229681576
 Light:
   m_ObjectHideFlags: 0
@@ -1670,6 +1689,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 464892909, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_RaycastMask.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 830025434, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
       propertyPath: xrRayInteractorLeft
       value: 
@@ -1678,6 +1701,10 @@ PrefabInstance:
       propertyPath: xrRayInteractorRight
       value: 
       objectReference: {fileID: 1732597283}
+    - target: {fileID: 1732597283, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_RaycastMask.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6999493590268574325, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
       propertyPath: m_Name
       value: XR
@@ -1857,6 +1884,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1988521333554558615, guid: 3dcf0f62e0ec6114680ce279c61596af, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9099613
+      objectReference: {fileID: 0}
+    - target: {fileID: 1988521333554558615, guid: 3dcf0f62e0ec6114680ce279c61596af, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.41469327
+      objectReference: {fileID: 0}
+    - target: {fileID: 1988521333554558615, guid: 3dcf0f62e0ec6114680ce279c61596af, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1988521333554558615, guid: 3dcf0f62e0ec6114680ce279c61596af, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1988521333554558615, guid: 3dcf0f62e0ec6114680ce279c61596af, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 49
+      objectReference: {fileID: 0}
+    - target: {fileID: 1988521333554558615, guid: 3dcf0f62e0ec6114680ce279c61596af, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2661128599077465271, guid: 3dcf0f62e0ec6114680ce279c61596af, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1902,12 +1953,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3433408607638877708, guid: 3dcf0f62e0ec6114680ce279c61596af, type: 3}
+      propertyPath: m_AttachTransform
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3433408607638877708, guid: 3dcf0f62e0ec6114680ce279c61596af, type: 3}
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 545938106}
     - target: {fileID: 3433408607638877709, guid: 3dcf0f62e0ec6114680ce279c61596af, type: 3}
       propertyPath: m_Name
       value: Sword
+      objectReference: {fileID: 0}
+    - target: {fileID: 8470348789287386207, guid: 3dcf0f62e0ec6114680ce279c61596af, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3dcf0f62e0ec6114680ce279c61596af, type: 3}

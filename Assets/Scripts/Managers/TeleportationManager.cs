@@ -118,7 +118,7 @@ public class TeleportationManager : MonoBehaviour
         // If both the controllers are centered, it means that the player don't want to teleport anymore.
         if(thumbstickLeft.action.ReadValue<Vector2>() != Vector2.zero) yield break;
 
-        if(!xrRayInteractorRight.TryGetCurrent3DRaycastHit(out RaycastHit hit))
+        if(!xrRayInteractorLeft.TryGetCurrent3DRaycastHit(out RaycastHit hit))
         {
             isActiveLeft = false;
             onTeleportationCanceled.Invoke();
