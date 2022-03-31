@@ -85,15 +85,20 @@ public class TeleportationManager : MonoBehaviour
         // If both the controllers are centered, it means that the player don't want to teleport anymore.
         if(thumbstickRight.action.ReadValue<Vector2>() != Vector2.zero) yield break;
 
-        // TODO: This might be what causing the players ability to teleport to invalid positions, its either that or im going mad.
-        if(!xrRayInteractorRight.TryGetCurrent3DRaycastHit(out RaycastHit hit))
+        // If the target is valid, teleport the player to the target.
+        xrRayInteractorRight.TryGetHitInfo(out Vector3 position, out Vector3 normal, out int positionInLine, out bool isValidTarget);
+        // This always return true except if there isn't any object at all, but we can check if the target is valid.
+        xrRayInteractorRight.TryGetCurrent3DRaycastHit(out RaycastHit hit);
+        
+        print(isValidTarget);
+        
+        if(!isValidTarget)
         {
             isActiveRight = false;
             onTeleportationCanceled.Invoke();
             xrRayInteractorRight.enabled = false;
             yield break;
         }
-
 
         // Teleport the player to the hit position
         TeleportRequest teleportRequest = new TeleportRequest(){
@@ -120,14 +125,17 @@ public class TeleportationManager : MonoBehaviour
         // If both the controllers are centered, it means that the player don't want to teleport anymore.
         if(thumbstickLeft.action.ReadValue<Vector2>() != Vector2.zero) yield break;
 
-        if(!xrRayInteractorLeft.TryGetCurrent3DRaycastHit(out RaycastHit hit))
+        xrRayInteractorLeft.TryGetHitInfo(out Vector3 position, out Vector3 normal, out int positionInLine, out bool isValidTarget);
+        
+        xrRayInteractorLeft.TryGetCurrent3DRaycastHit(out RaycastHit hit);
+
+        if(!isValidTarget)
         {
             isActiveLeft = false;
             onTeleportationCanceled.Invoke();
             xrRayInteractorLeft.enabled = false;
             yield break;
         }
-
 
         // Teleport the player to the hit position
         TeleportRequest teleportRequest = new TeleportRequest(){

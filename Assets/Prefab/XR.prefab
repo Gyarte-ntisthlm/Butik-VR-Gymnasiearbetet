@@ -566,12 +566,12 @@ MonoBehaviour:
   m_SphereCastRadius: 0.1
   m_RaycastMask:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 4294967295
   m_RaycastTriggerInteraction: 1
   m_HitClosestOnly: 0
   m_HoverToSelect: 0
   m_HoverTimeToSelect: 0.5
-  m_EnableUIInteraction: 1
+  m_EnableUIInteraction: 0
   m_AllowAnchorControl: 1
   m_UseForceGrab: 1
   m_RotateSpeed: 180
@@ -1141,7 +1141,7 @@ Canvas:
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 412427300}
-  m_PlaneDistance: 0.01
+  m_PlaneDistance: 0.1
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -1173,7 +1173,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &1260400605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1631,12 +1631,12 @@ MonoBehaviour:
   m_SphereCastRadius: 0.1
   m_RaycastMask:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 4294967295
   m_RaycastTriggerInteraction: 1
   m_HitClosestOnly: 0
   m_HoverToSelect: 0
   m_HoverTimeToSelect: 0.5
-  m_EnableUIInteraction: 1
+  m_EnableUIInteraction: 0
   m_AllowAnchorControl: 1
   m_UseForceGrab: 1
   m_RotateSpeed: 180
@@ -2202,8 +2202,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputActionAsset: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   teleportationProvider: {fileID: 6999493590356022001}
-  xrRayInteractorRight: {fileID: 0}
-  xrRayInteractorLeft: {fileID: 0}
+  xrRayInteractorRight: {fileID: 1732597283}
+  xrRayInteractorLeft: {fileID: 464892909}
   thumbstickRight: {fileID: -8270564778575511633, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   thumbstickLeft: {fileID: -4084014799535200556, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   activateTeleportationActionRight: {fileID: -8061240218431744966, guid: c348712bda248c246b8c49b3db54643f, type: 3}
