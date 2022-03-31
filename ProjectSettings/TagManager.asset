@@ -14,7 +14,7 @@ TagManager:
   - Ground
   - Water
   - UI
-  - 
+  - Blink
   - 
   - 
   - 
@@ -46,4 +46,7 @@ TagManager:
     locked: 0
   - name: UI
     uniqueID: 3109698583
+    locked: 0
+  - name: Blink
+    uniqueID: 3665953265
     locked: 0

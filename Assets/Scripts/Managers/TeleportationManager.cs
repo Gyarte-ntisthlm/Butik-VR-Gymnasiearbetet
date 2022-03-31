@@ -100,10 +100,11 @@ public class TeleportationManager : MonoBehaviour
             destinationPosition = hit.point
         };
 
-        teleportationProvider.QueueTeleportRequest(teleportRequest);
-        
         // Invoke the teleportation events
         onTeleportationActivated.Invoke();
+
+        teleportationProvider.QueueTeleportRequest(teleportRequest);
+        
 
         isActiveRight = false;
         xrRayInteractorRight.enabled = false;
@@ -133,11 +134,11 @@ public class TeleportationManager : MonoBehaviour
             destinationPosition = hit.point
         };
 
-        teleportationProvider.QueueTeleportRequest(teleportRequest);
-        
         // Invoke the teleportation events
         onTeleportationActivated.Invoke();
 
+        teleportationProvider.QueueTeleportRequest(teleportRequest);
+        
         isActiveLeft = false;
         xrRayInteractorLeft.enabled = false;
 
