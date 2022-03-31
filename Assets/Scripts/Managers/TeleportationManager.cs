@@ -85,6 +85,7 @@ public class TeleportationManager : MonoBehaviour
         // If both the controllers are centered, it means that the player don't want to teleport anymore.
         if(thumbstickRight.action.ReadValue<Vector2>() != Vector2.zero) yield break;
 
+        // TODO: This might be what causing the players ability to teleport to invalid positions, its either that or im going mad.
         if(!xrRayInteractorRight.TryGetCurrent3DRaycastHit(out RaycastHit hit))
         {
             isActiveRight = false;

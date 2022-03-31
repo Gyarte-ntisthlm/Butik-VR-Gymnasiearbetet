@@ -8,6 +8,10 @@ public class Blink : MonoBehaviour
 {
     [SerializeField] private Image image;
 
+    private void Start()
+    {
+        image.CrossFadeAlpha(0, 0f, true);
+    }
 
     public void Blink_()
     {
@@ -17,10 +21,10 @@ public class Blink : MonoBehaviour
 
     IEnumerator BlinkCoroutine(){
         // Change the opacity of the image by lerping from 0 to 1 then back to 0, it should in total take 1 second.
-        image.CrossFadeAlpha(1, 0.2f, true);
-        yield return new WaitForSeconds(0.2f);
-        image.CrossFadeAlpha(0, 0.5f, true);
+        image.CrossFadeAlpha(1, 0.05f, true);
+        yield return new WaitForSeconds(0.05f);
+        image.CrossFadeAlpha(0, 0.1f, true);
         Debug.Log("Blink");
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.1f);
     }
 }
