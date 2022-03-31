@@ -1177,6 +1177,10 @@ PrefabInstance:
       propertyPath: m_TeleportationProvider
       value: 
       objectReference: {fileID: 1560324753}
+    - target: {fileID: 2874445081839471908, guid: 5e9db85ccd7947144b504728fbe43c9b, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2874445082568856060, guid: 5e9db85ccd7947144b504728fbe43c9b, type: 3}
       propertyPath: m_Name
       value: Store
@@ -1654,16 +1658,40 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 464892909, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_LineType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 464892909, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_Velocity
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 464892909, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_HitClosestOnly
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 464892909, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
       propertyPath: m_RaycastMask.m_Bits
       value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 464892909, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_EnableUIInteraction
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 464892909, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
       propertyPath: m_HapticSelectExitDuration
-      value: 0.1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 464892909, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 4294967290
       objectReference: {fileID: 0}
     - target: {fileID: 464892909, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
       propertyPath: m_HapticSelectExitIntensity
-      value: 0.05
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 464892909, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_PlayHapticsOnSelectExited
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 830025434, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
       propertyPath: xrRayInteractorLeft
@@ -1718,16 +1746,40 @@ PrefabInstance:
       value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 1732597283, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_LineType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1732597283, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_Velocity
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1732597283, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_HitClosestOnly
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1732597283, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
       propertyPath: m_RaycastMask.m_Bits
       value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 1732597283, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_EnableUIInteraction
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1732597283, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
       propertyPath: m_HapticSelectExitDuration
-      value: 0.1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1732597283, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 4294967290
       objectReference: {fileID: 0}
     - target: {fileID: 1732597283, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
       propertyPath: m_HapticSelectExitIntensity
-      value: 0.05
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1732597283, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_PlayHapticsOnSelectExited
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6999493590268574325, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
       propertyPath: m_Name
