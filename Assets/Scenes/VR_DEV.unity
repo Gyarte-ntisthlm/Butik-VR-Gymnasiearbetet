@@ -1648,12 +1648,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 464892909, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
-      propertyPath: m_InteractionLayers.m_Bits
-      value: 4294967290
+      propertyPath: m_HapticSelectExitDuration
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 464892909, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_HapticSelectExitIntensity
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 1732597283, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
-      propertyPath: m_InteractionLayers.m_Bits
-      value: 4294967290
+      propertyPath: m_HapticSelectExitDuration
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1732597283, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
+      propertyPath: m_HapticSelectExitIntensity
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 6999493590268574325, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
       propertyPath: m_Name
