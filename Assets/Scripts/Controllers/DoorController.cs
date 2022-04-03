@@ -1,14 +1,18 @@
-using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
-public class DoorController : XRGrabInteractable
+public class DoorController : MonoBehaviour
 {
 
-    // This is called when the player grabs the doorknob.
-    protected override void OnSelectEntering(SelectEnterEventArgs args)
+    [SerializeField] private InputActionReference LeftHandGrip = null;
+    [SerializeField] private InputActionReference RightHandGrip = null;
+
+    private void OnTriggerEnter(Collider other)
     {
-        base.OnSelectEntering(args);
-        
-        GameManager.instance.OnEvalCompleted();
+        if (other.gameObject.tag == "Player" && (RightHandGrip.action.IsPressed() || LeftHandGrip.action.IsPressed()))
+        {
+            GameManager.instance.OnEvalCompleted();
+            print("Eval completed");
+        }
     }
 }

@@ -815,7 +815,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!108 &1333359874
 Light:
@@ -1121,6 +1121,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 72.916
       objectReference: {fileID: 0}
+    - target: {fileID: 8583560345139495097, guid: 719e854befd037a40ad7c7b47023af0e, type: 3}
+      propertyPath: LeftHandGrip
+      value: 
+      objectReference: {fileID: -6131295136447488360, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+    - target: {fileID: 8583560345139495097, guid: 719e854befd037a40ad7c7b47023af0e, type: 3}
+      propertyPath: RightHandGrip
+      value: 
+      objectReference: {fileID: 187161793506945269, guid: c348712bda248c246b8c49b3db54643f, type: 3}
     - target: {fileID: 8583560345139495097, guid: 719e854befd037a40ad7c7b47023af0e, type: 3}
       propertyPath: m_InteractionManager
       value: 
