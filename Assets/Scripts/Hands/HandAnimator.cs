@@ -1,12 +1,13 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.XR;
-using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.InputSystem;
 
 public class HandAnimator : MonoBehaviour
 {
+    [SerializeField] private InputActionReference gripAction;
+    [SerializeField] private InputActionReference pointAction;
+    
     public float speed = 0.5f;
-    public XRController controller = null;
 
     public Animator animator = null;
 
@@ -23,9 +24,6 @@ public class HandAnimator : MonoBehaviour
         new Finger(FingerType.Thumb)
     };
 
-
-    // [SerialzedField] private 
-    
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -34,39 +32,53 @@ public class HandAnimator : MonoBehaviour
     private void Update()
     {
         // Store input
+        CheckGrip();
+        CheckPointer();
 
         // Smooth input values
+        SmoothFinger(gripfingers);
+        SmoothFinger(pointFingers);
 
         // Apply smoothed values
+        AnimateFinger(gripfingers);
+        AnimateFinger(pointFingers);
     }
 
     private void CheckGrip()
     {
-        // if(controller.inputDevice.);
+        SetFingerTargets(gripfingers, gripAction.action.ReadValue<float>());
     }
 
     private void CheckPointer()
     {
-
+        SetFingerTargets(pointFingers, pointAction.action.ReadValue<float>());
     }
 
     private void SetFingerTargets(List<Finger> fingers, float value)
     {
-
+        foreach (Finger finger in fingers)
+            finger.target = value;
     }
 
     private void SmoothFinger(List<Finger> fingers)
     {
-
+        foreach (Finger finger in fingers)
+        {
+            float time = Time.unscaledDeltaTime * speed;
+            finger.current = Mathf.MoveTowards(finger.current, finger.target, time);
+        }
     }
 
     private void AnimateFinger(List<Finger> fingers)
     {
-
+        foreach (Finger finger in fingers)
+        {
+            AnimateFinger(finger.type.ToString(), finger.current);
+        }
     }
 
     private void AnimateFinger(string finger, float blend)
     {
-
+        animator.SetFloat(finger, blend);
     }
 }
