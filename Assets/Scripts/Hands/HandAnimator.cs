@@ -6,6 +6,7 @@ public class HandAnimator : MonoBehaviour
 {
     [SerializeField] private InputActionReference gripAction;
     [SerializeField] private InputActionReference pointAction;
+    [SerializeField] private InputActionReference indexAction;
     
     public float speed = 0.05f;
 
@@ -20,8 +21,12 @@ public class HandAnimator : MonoBehaviour
 
     private readonly List<Finger> pointFingers = new List<Finger>()
     {
-        new Finger(FingerType.Index),
         new Finger(FingerType.Thumb)
+    };
+
+    private readonly List<Finger> indexFingers = new List<Finger>()
+    {
+        new Finger(FingerType.Index)
     };
 
     private void Awake()
@@ -34,14 +39,17 @@ public class HandAnimator : MonoBehaviour
         // Store input
         CheckGrip();
         CheckPointer();
+        CheckIndex();
 
         // Smooth input values
         SmoothFinger(gripfingers);
         SmoothFinger(pointFingers);
+        SmoothFinger(indexFingers);
 
         // Apply smoothed values
         AnimateFinger(gripfingers);
         AnimateFinger(pointFingers);
+        AnimateFinger(indexFingers);
     }
 
     private void CheckGrip()
@@ -52,6 +60,11 @@ public class HandAnimator : MonoBehaviour
     private void CheckPointer()
     {
         SetFingerTargets(pointFingers, pointAction.action.ReadValue<float>());
+    }
+
+    private void CheckIndex()
+    {
+        SetFingerTargets(indexFingers, indexAction.action.ReadValue<float>());
     }
 
     private void SetFingerTargets(List<Finger> fingers, float value)

@@ -223,6 +223,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "TriggerTouched",
+                    "type": "Value",
+                    "id": "409a7912-559e-4dee-ae01-786ab3a6da21",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -602,22 +611,11 @@
                 },
                 {
                     "name": "",
-                    "id": "9c3ca0d0-0653-41e4-b966-f348a8b7be77",
-                    "path": "<XRController>{LeftHand}/triggerPressed",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Generic XR Controller",
-                    "action": "Point",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "866dae3f-e201-4fa6-96f0-83f76a219228",
                     "path": "<XRController>{LeftHand}/primaryTouch",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Generic XR Controller",
                     "action": "Point",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -628,8 +626,30 @@
                     "path": "<XRController>{LeftHand}/touchpadTouch",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Generic XR Controller",
                     "action": "Point",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1e3a9c46-52ad-4047-850c-0661cfb30030",
+                    "path": "<XRController>{LeftHand}/thumbstickTouched",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "Point",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1f7eea39-04af-4f68-add8-7fb9dc0e9936",
+                    "path": "<XRController>{LeftHand}/trigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "TriggerTouched",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -796,6 +816,15 @@
                     "name": "Point",
                     "type": "Value",
                     "id": "14df241f-ff79-4994-8e03-c9d4f234ef16",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "TriggerTouched",
+                    "type": "Value",
+                    "id": "63678d8f-0148-47c2-8ef6-e6ff72fa5819",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -1157,22 +1186,11 @@
                 },
                 {
                     "name": "",
-                    "id": "76deb625-ab28-470a-b0e4-8b9c04e5667c",
-                    "path": "<XRController>{RightHand}/triggerPressed",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Generic XR Controller",
-                    "action": "Point",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "7204f877-6367-43a2-a651-69cdc3304a69",
                     "path": "<XRController>{RightHand}/primaryTouched",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Generic XR Controller",
                     "action": "Point",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -1183,8 +1201,30 @@
                     "path": "<XRController>{RightHand}/thumbstickTouched",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Generic XR Controller",
                     "action": "Point",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "56d2133a-7deb-4e07-a942-955fc0a837c6",
+                    "path": "<XRController>{RightHand}/touchpadTouch",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "Point",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "df4b4404-ab95-4e6b-ad76-eb3884ab64f5",
+                    "path": "<XRController>{RightHand}/triggerPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "TriggerTouched",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
