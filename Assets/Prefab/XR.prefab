@@ -2459,6 +2459,10 @@ PrefabInstance:
       value: Hand_Left
       objectReference: {fileID: 0}
     - target: {fileID: 8220382583221551338, guid: a6b880e5818045c42b73a47231aa7c45, type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: 31ba13cd4816afa4a97c4aa8320152b7, type: 3}
+    - target: {fileID: 8220382583221551338, guid: a6b880e5818045c42b73a47231aa7c45, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 3849d8339501ff847be5e13bff16d0c5, type: 2}
@@ -2468,16 +2472,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8220382583221551339, guid: a6b880e5818045c42b73a47231aa7c45, type: 3}
       propertyPath: speed
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8220382583221551339, guid: a6b880e5818045c42b73a47231aa7c45, type: 3}
       propertyPath: animator
       value: 
-      objectReference: {fileID: 1384742752965282770}
+      objectReference: {fileID: 0}
     - target: {fileID: 8220382583221551339, guid: a6b880e5818045c42b73a47231aa7c45, type: 3}
       propertyPath: gripAction
       value: 
       objectReference: {fileID: -6131295136447488360, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+    - target: {fileID: 8220382583221551339, guid: a6b880e5818045c42b73a47231aa7c45, type: 3}
+      propertyPath: indexAction
+      value: 
+      objectReference: {fileID: -4289430672226363583, guid: c348712bda248c246b8c49b3db54643f, type: 3}
     - target: {fileID: 8220382583221551339, guid: a6b880e5818045c42b73a47231aa7c45, type: 3}
       propertyPath: pointAction
       value: 
@@ -2538,11 +2546,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8220382583221551341, guid: a6b880e5818045c42b73a47231aa7c45, type: 3}
   m_PrefabInstance: {fileID: 6999493589091765048}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &1384742752965282770 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 8220382583221551338, guid: a6b880e5818045c42b73a47231aa7c45, type: 3}
-  m_PrefabInstance: {fileID: 6999493589091765048}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6999493590482137536
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2552,16 +2555,24 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 573763192728940800, guid: 1eeee74c62d0ea748a9594e810c00d42, type: 3}
       propertyPath: speed
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 573763192728940800, guid: 1eeee74c62d0ea748a9594e810c00d42, type: 3}
       propertyPath: gripAction
       value: 
       objectReference: {fileID: 187161793506945269, guid: c348712bda248c246b8c49b3db54643f, type: 3}
     - target: {fileID: 573763192728940800, guid: 1eeee74c62d0ea748a9594e810c00d42, type: 3}
+      propertyPath: indexAction
+      value: 
+      objectReference: {fileID: 7904272356298805229, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+    - target: {fileID: 573763192728940800, guid: 1eeee74c62d0ea748a9594e810c00d42, type: 3}
       propertyPath: pointAction
       value: 
       objectReference: {fileID: -6816565387138398639, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+    - target: {fileID: 573763192728940801, guid: 1eeee74c62d0ea748a9594e810c00d42, type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: 31ba13cd4816afa4a97c4aa8320152b7, type: 3}
     - target: {fileID: 573763192728940801, guid: 1eeee74c62d0ea748a9594e810c00d42, type: 3}
       propertyPath: m_Controller
       value: 
