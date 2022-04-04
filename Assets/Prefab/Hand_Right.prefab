@@ -822,9 +822,9 @@ Animator:
   m_GameObject: {fileID: 573763192728940802}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: a0f2e416fe09a3e458e3da32b275ae31, type: 3}
-  m_Controller: {fileID: 9100000, guid: 92c208c026838c0489a77c7db4965bbd, type: 2}
+  m_Controller: {fileID: 9100000, guid: 3849d8339501ff847be5e13bff16d0c5, type: 2}
   m_CullingMode: 1
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
@@ -843,6 +843,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cce39e22722f0ef4ba14435a1787b435, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gripAction: {fileID: 187161793506945269, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  pointAction: {fileID: -6816565387138398639, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  speed: 1
+  animator: {fileID: 0}
 --- !u!54 &573763192060454923
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -882,8 +886,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.1, y: 0.05, z: 0.15}
-  m_Center: {x: 0.035, y: 0.04, z: 0}
+  m_Size: {x: 0.1, y: 0.025, z: 0.1}
+  m_Center: {x: 0.035, y: 0.04, z: -0.03}
 --- !u!1 &573763192810725241
 GameObject:
   m_ObjectHideFlags: 0
@@ -965,7 +969,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c4874cd5feb313e44a9c89e5dbdd5dc0, type: 2}
+  - {fileID: 2100002, guid: ff6dc36862fe41641bb21568d92147c9, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -990,7 +994,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 2424622706892375604, guid: a0f2e416fe09a3e458e3da32b275ae31, type: 3}
+  m_Mesh: {fileID: 2424622706892375604, guid: 31ba13cd4816afa4a97c4aa8320152b7, type: 3}
   m_Bones:
   - {fileID: 573763190867788513}
   - {fileID: 573763191999364269}

@@ -7,7 +7,7 @@ public class HandAnimator : MonoBehaviour
     [SerializeField] private InputActionReference gripAction;
     [SerializeField] private InputActionReference pointAction;
     
-    public float speed = 0.5f;
+    public float speed = 0.05f;
 
     public Animator animator = null;
 
