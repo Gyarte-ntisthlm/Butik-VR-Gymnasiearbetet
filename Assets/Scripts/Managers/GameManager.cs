@@ -5,7 +5,6 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public string order = "int-gui";
-    public int currentWorldID = 0;
 
     private void Awake()
     {
