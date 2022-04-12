@@ -168,6 +168,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 3909233067320746374, guid: e5b393540a6d8984f821b30e40d69135, type: 3}
+    - target: {fileID: 2954809241758147195, guid: a7afdf87c4fbed54fb267aa295f009e8, type: 3}
+      propertyPath: m_Constraints
+      value: 122
+      objectReference: {fileID: 0}
     - target: {fileID: 3218111807931642976, guid: a7afdf87c4fbed54fb267aa295f009e8, type: 3}
       propertyPath: m_ConnectedAnchor.y
       value: -3.7252902e-11
@@ -251,6 +255,18 @@ PrefabInstance:
     - target: {fileID: 4354288670130060865, guid: a7afdf87c4fbed54fb267aa295f009e8, type: 3}
       propertyPath: m_Name
       value: Phys Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 4736932322301784666, guid: a7afdf87c4fbed54fb267aa295f009e8, type: 3}
+      propertyPath: m_Size.x
+      value: 0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4736932322301784666, guid: a7afdf87c4fbed54fb267aa295f009e8, type: 3}
+      propertyPath: m_Size.y
+      value: 0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4736932322301784666, guid: a7afdf87c4fbed54fb267aa295f009e8, type: 3}
+      propertyPath: m_Size.z
+      value: 0.12
       objectReference: {fileID: 0}
     - target: {fileID: 4736932322301784666, guid: a7afdf87c4fbed54fb267aa295f009e8, type: 3}
       propertyPath: m_Center.y
