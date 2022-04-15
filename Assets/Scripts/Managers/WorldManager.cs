@@ -77,7 +77,7 @@ public class WorldManager : MonoBehaviour
 
         // Load the eval scene
         EvalForScene = SceneManager.GetActiveScene().name;
-
+        GameManager.instance.OnSceneCompleted();
         SceneManager.LoadSceneAsync("Eval");
     }
 

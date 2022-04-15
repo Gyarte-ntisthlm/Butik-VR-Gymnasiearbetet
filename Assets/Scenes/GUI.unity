@@ -1145,7 +1145,7 @@ GameObject:
   - component: {fileID: 1092300091}
   - component: {fileID: 1092300090}
   m_Layer: 0
-  m_Name: interactiveSS
+  m_Name: GuiSS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
