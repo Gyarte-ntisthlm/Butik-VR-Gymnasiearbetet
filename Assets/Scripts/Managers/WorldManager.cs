@@ -66,6 +66,8 @@ public class WorldManager : MonoBehaviour
     }
 
     private IEnumerator LoadEval() {
+        yield return new WaitForSeconds(10f); // Wait 10 seconds before loading the eval scene
+        
         // When call, invoke the "magic" effect, blinding the player, then loading the eval scene
 
         // Invoke the "magic" effect

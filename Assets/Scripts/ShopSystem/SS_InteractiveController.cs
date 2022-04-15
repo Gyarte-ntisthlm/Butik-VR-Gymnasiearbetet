@@ -35,13 +35,8 @@ public class SS_InteractiveController : MonoBehaviour
     public void InvokePurchase()
     {
         if(isInvoked) return; // Don't invoke twice.
-        if (hasMoney && purchaseObjects.Count > 0) StartCoroutine(Purchase());
-    }
-
-    IEnumerator Purchase()
-    {
+        if (!hasMoney && purchaseObjects.Count == 0) return; // Don't invoke if there's no money and no items.
         isInvoked = true;
-        yield return new WaitForSeconds(10f);
         GameManager.instance.OnPurchaseCompleted();
     }
 
