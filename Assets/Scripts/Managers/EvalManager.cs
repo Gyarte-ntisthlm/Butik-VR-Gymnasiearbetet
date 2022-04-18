@@ -25,7 +25,7 @@ public class EvalManager : MonoBehaviour
         // If it does, we first display the eval for scene, then we display the next scene
         // There are always 2 instructions, either intro -> room, or eval -> room.
         
-        if (evalForScene == "") Intro();
+        if (evalForScene == null) Intro();
         else ShowEvalMessage();        
 
         // When the currentInstruction is increased, we then display the next instruction
