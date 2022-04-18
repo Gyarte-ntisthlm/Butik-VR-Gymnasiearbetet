@@ -79,7 +79,7 @@ public class EvalManager : MonoBehaviour
         // Show the next instruction
         ClearScreen();
 
-        if (GameManager.instance.order == "int-gui" && evalForScene == "Intro") 
+        if (GameManager.instance.order == "int-gui" && evalForScene == null) 
         {
             Interactive();
             return;
@@ -89,8 +89,8 @@ public class EvalManager : MonoBehaviour
             Interactive();
             return;
         }
-        
-        if (GameManager.instance.order == "gui-int" && evalForScene == "Intro") 
+
+        if (GameManager.instance.order == "gui-int" && evalForScene == null) 
         {
             GUI();
             return;
