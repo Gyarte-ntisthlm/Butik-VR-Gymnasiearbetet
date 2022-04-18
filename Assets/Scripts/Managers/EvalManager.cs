@@ -12,67 +12,95 @@ public class EvalManager : MonoBehaviour
     [SerializeField] private List<GameObject> InteractiveInstruction = new List<GameObject>();
     [SerializeField] private List<GameObject> MixedInstruction = new List<GameObject>();
     [SerializeField] private List<GameObject> GUIInstruction = new List<GameObject>();
-
     private int currentInstruction = 0;
+    private string evalForScene;
 
     GameObject eval_gui;
     void Start()
     {
         eval_gui = GameObject.Find("Anchour");
+        evalForScene = FindObjectOfType<WorldManager>().GetComponent<WorldManager>().EvalForScene;
 
-        switch (FindObjectOfType<WorldManager>().GetComponent<WorldManager>().EvalForScene)
-        {
-            case "Intro":
-                StartCoroutine(Intro());
-                break;
-            case "Interactive":
-                StartCoroutine(Interactive());
-                break;
-            case "Mixed":
-                StartCoroutine(Mixed());
-                break;
-            case "GUI":
-                StartCoroutine(GUI());
-                break;
-            default:
-                StartCoroutine(Intro());
-                break;
-        }
+        // If the evalfornext does not contain anything, then we are in the intro scene
+        // If it does, we first display the eval for scene, then we display the next scene
+        // There are always 2 instructions, either intro -> room, or eval -> room.
+        
+        if (evalForScene == "") Intro();
+        else ShowEvalMessage();        
+
+        // When the currentInstruction is increased, we then display the next instruction
     }
 
+
+    #region Show methods
     // Intro functionality
-    IEnumerator Intro()
+    private void Intro()
     {
-        
-        yield return new WaitForSeconds(2);
+        Instantiate(IntroInstruction[0], eval_gui.transform);
     }
 
     // Interactive functionality
-    IEnumerator Interactive()
+    private void Interactive()
     {
-        yield return new WaitForSeconds(2);
+        Instantiate(InteractiveInstruction[0], eval_gui.transform);
     }
 
     // Mixed functionality
-    IEnumerator Mixed()
+    private void Mixed()
     {
-        yield return new WaitForSeconds(2);
+        Instantiate(MixedInstruction[0], eval_gui.transform);
     }
     // GUI functionality
-    IEnumerator GUI()
+    private void GUI()
     {
-        yield return new WaitForSeconds(2);
+        Instantiate(GUIInstruction[0], eval_gui.transform);
     }
 
     private void ShowEvalMessage()
+    {
+        // Show eval message by setting the prefab as a child of the eval_gui anchour object
+        Instantiate(evalRate, eval_gui.transform);
+    }
+
+    #endregion
+
+    private void ClearScreen()
     {
         // Remove all the children of the eval_gui anchour object
         foreach (Transform child in eval_gui.transform)
         {
             Destroy(child.gameObject);
         }
+    }
 
-        // Show eval message by setting the prefab as a child of the eval_gui anchour object
-        GameObject evalMessage = Instantiate(evalRate, eval_gui.transform);
+
+    public void ShowNextInstruction()
+    {
+        // Show the next instruction
+        ClearScreen();
+
+        if (GameManager.instance.order == "int-gui" && evalForScene == "Intro") 
+        {
+            Interactive();
+            return;
+        }
+        if (GameManager.instance.order == "gui-int" && evalForScene == "Mixed")
+        {
+            Interactive();
+            return;
+        }
+        
+        if (GameManager.instance.order == "gui-int" && evalForScene == "Intro") 
+        {
+            GUI();
+            return;
+        }
+        if (GameManager.instance.order == "int-gui" && evalForScene == "Mixed") 
+        {
+            GUI();
+            return;
+        }
+
+        Mixed();
     }
 }

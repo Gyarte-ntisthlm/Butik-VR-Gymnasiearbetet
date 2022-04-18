@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02d4ab5d3bbbb964c8054e100e36fb77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefix: interactiveRoom
+  prefix: Interactive
   title: 
 --- !u!4 &196066985
 Transform:
