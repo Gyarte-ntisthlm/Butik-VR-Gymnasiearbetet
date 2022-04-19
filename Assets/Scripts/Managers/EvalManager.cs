@@ -12,6 +12,13 @@ public class EvalManager : MonoBehaviour
     [SerializeField] private List<GameObject> InteractiveInstruction = new List<GameObject>();
     [SerializeField] private List<GameObject> MixedInstruction = new List<GameObject>();
     [SerializeField] private List<GameObject> GUIInstruction = new List<GameObject>();
+
+    [SerializeField] private GameObject DoorInstructions;
+
+    [SerializeField] private GameObject SingleBell;
+    [SerializeField] private GameObject RateBell;
+    [SerializeField] private GameObject Door;
+
     private int currentInstruction = 0;
     private string evalForScene;
 
@@ -36,6 +43,8 @@ public class EvalManager : MonoBehaviour
     // Intro functionality
     private void Intro()
     {
+        RateBell.SetActive(false);
+        SingleBell.SetActive(true);
         Instantiate(IntroInstruction[0], eval_gui.transform);
     }
 
@@ -58,6 +67,8 @@ public class EvalManager : MonoBehaviour
 
     private void ShowEvalMessage()
     {
+        SingleBell.SetActive(false);
+        RateBell.SetActive(true);
         // Show eval message by setting the prefab as a child of the eval_gui anchour object
         Instantiate(evalRate, eval_gui.transform);
     }
@@ -78,6 +89,17 @@ public class EvalManager : MonoBehaviour
     {
         // Show the next instruction
         ClearScreen();
+        RateBell.SetActive(false);
+        SingleBell.SetActive(true);
+
+        if(currentInstruction > 0){
+            Instantiate(DoorInstructions, eval_gui.transform);
+            Door.SetActive(true);
+            GameManager.instance.OnActivateDoor();
+            return;
+        }
+
+        currentInstruction++;
 
         if (GameManager.instance.order == "int-gui" && evalForScene == null) 
         {

@@ -7,7 +7,7 @@ public class DoorController : MonoBehaviour
     [SerializeField] private InputActionReference LeftHandGrip = null;
     [SerializeField] private InputActionReference RightHandGrip = null;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == "Player" && (RightHandGrip.action.IsPressed() || LeftHandGrip.action.IsPressed()))
         {

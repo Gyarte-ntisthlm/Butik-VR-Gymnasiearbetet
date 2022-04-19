@@ -11,11 +11,11 @@ public class GameManager : MonoBehaviour
         instance = this;
         DontDestroyOnLoad(this);
         order = DetermainOrder();
+        print(order);
     }
 
     private static string DetermainOrder(){
-        System.Random rnd = new System.Random();
-        int r = rnd.Next(0, 1);
+        int r = UnityEngine.Random.Range(0, 1);
         return r == 0 ? "int-gui" : "gui-int";
     }
 

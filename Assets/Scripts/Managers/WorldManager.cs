@@ -29,12 +29,12 @@ public class WorldManager : MonoBehaviour
         // When this method is called, determain what the next scene should be, and load it
         
         // By using the order, and EvalForScene, we can determine what the next scene should be
-        if (GameManager.instance.order == "int-gui" && EvalForScene == "Intro") 
+        if (GameManager.instance.order == "int-gui" && EvalForScene == null) 
         {
             StartCoroutine(LoadTest("Interactive"));
             return;
         }
-        if (GameManager.instance.order == "gui-int" && EvalForScene == "Intro") 
+        if (GameManager.instance.order == "gui-int" && EvalForScene == null) 
         {
             StartCoroutine(LoadTest("GUI"));
             return;
