@@ -47,7 +47,7 @@ public class WorldManager : MonoBehaviour
         }
         if ((GameManager.instance.order == "int-gui" && EvalForScene == "GUI") || (GameManager.instance.order == "gui-int" && EvalForScene == "Interactive"))
         {
-            StartCoroutine(LoadTest("Thankyou"));
+            StartCoroutine(LoadTest("Thanks"));
             return;
         }
 
