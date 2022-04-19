@@ -12,11 +12,6 @@ public class WorldManager : MonoBehaviour
     public string EvalForScene { get; private set; }
     private void Awake() {
         DontDestroyOnLoad(this);
-
-        // If there is already a world manager, destroy this one
-        if (FindObjectsOfType<WorldManager>().Length > 1) {
-            Destroy(gameObject);
-        }
     }
 
     private void Start() {
@@ -26,6 +21,7 @@ public class WorldManager : MonoBehaviour
     }
 
     private void OnEvalCompleted() {
+        print(EvalForScene);
         // When this method is called, determain what the next scene should be, and load it
         
         // By using the order, and EvalForScene, we can determine what the next scene should be
@@ -49,7 +45,7 @@ public class WorldManager : MonoBehaviour
             StartCoroutine(LoadTest("Interactive"));
             return;
         }
-        if ((GameManager.instance.order == "int-gui" && EvalForScene == "GUI") || (GameManager.instance.order == "int-gui" && EvalForScene == "Interactive"))
+        if ((GameManager.instance.order == "int-gui" && EvalForScene == "GUI") || (GameManager.instance.order == "gui-int" && EvalForScene == "Interactive"))
         {
             StartCoroutine(LoadTest("Thankyou"));
             return;
@@ -66,7 +62,7 @@ public class WorldManager : MonoBehaviour
     }
 
     private IEnumerator LoadEval() {
-        yield return new WaitForSeconds(10f); // Wait 10 seconds before loading the eval scene
+        yield return new WaitForSeconds(2f); // Wait 10 seconds before loading the eval scene
         
         // When call, invoke the "magic" effect, blinding the player, then loading the eval scene
 
@@ -77,6 +73,7 @@ public class WorldManager : MonoBehaviour
 
         // Load the eval scene
         EvalForScene = SceneManager.GetActiveScene().name;
+        print($"LoadEval: ({EvalForScene})");
         GameManager.instance.OnSceneCompleted();
         SceneManager.LoadSceneAsync("Eval");
     }
@@ -90,8 +87,6 @@ public class WorldManager : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         // Load the eval scene
-        EvalForScene = SceneManager.GetActiveScene().name;
-
         SceneManager.LoadSceneAsync(scene);
     }
 }

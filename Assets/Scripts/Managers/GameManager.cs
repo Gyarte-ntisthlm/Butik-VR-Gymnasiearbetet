@@ -4,18 +4,21 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public string order = "int-gui";
+    public string order = "";
 
     private void Awake()
     {
         instance = this;
         DontDestroyOnLoad(this);
-        order = DetermainOrder();
-        print(order);
-    }
 
+        if(order != "")
+        {
+            order = DetermainOrder();
+            print(order);
+        }
+    }
     private static string DetermainOrder(){
-        int r = UnityEngine.Random.Range(0, 2);
+        int r = UnityEngine.Random.Range(0, 1);
         return r == 0 ? "int-gui" : "gui-int";
     }
 
