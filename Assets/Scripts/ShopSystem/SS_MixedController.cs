@@ -20,13 +20,25 @@ public class SS_MixedController : MonoBehaviour
         GameManager.instance.onPurchaseAborted -= OnPurchaseAborted;
     }
 
-    public void TogglePurchase() => GameManager.instance.OnPurchaseBegin();
+    public void TogglePurchase() {
+        GameManager.instance.OnPurchaseBegin();
+    }
 
-    public void PressBuy() => GameManager.instance.OnPurchaseCompleted();
+    public void PressBuy() {
+        GameManager.instance.OnPurchaseCompleted();
+    }
 
-    private void OnPurchaseBegin() => UI.SetActive(true);
+    private void OnPurchaseBegin()
+    {
+        print("Started purchase");
+        UI.SetActive(true);
+    }
 
-    private void OnPurchaseAborted() => UI.SetActive(false);
+    private void OnPurchaseAborted()
+    {
+        print("Purchase aborted");
+        UI.SetActive(false);
+    }
 
     public void ChangeInfo(string info)
     {

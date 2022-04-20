@@ -12,7 +12,6 @@ using UnityEngine;
 public class AnalyticsController : MonoBehaviour
 {
     public string prefix = "";
-    public string title = "";
 
     string path;
 
@@ -78,7 +77,6 @@ public class AnalyticsController : MonoBehaviour
         // Save the timestamp
         analyticsData.SceneCompleted = Time.timeSinceLevelLoad;
         analyticsData.prefix = prefix;
-        analyticsData.title = title;
 
         Save(analyticsData);
     }

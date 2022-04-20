@@ -15,6 +15,12 @@ public class CashregisterController : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
+    void OnDestroy()
+    {
+        GameManager.instance.onPurchaseCompleted -= OnPurchaseCompleted;
+        GameManager.instance.onPurchaseBegin -= OnPurchaseBegin;
+    }
+
     // When the purchase is completed, play the "Done" animation clip from the cash register
     void OnPurchaseCompleted()
     {

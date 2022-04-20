@@ -11,7 +11,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 8b8ecd4fcba2b5540b8761732be5925a, type: 2}
   m_audioClip: {fileID: 8300000, guid: 6f380759df5a29e44b9c3ab023a9861a, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -197,7 +197,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4354288670130060865, guid: a7afdf87c4fbed54fb267aa295f009e8, type: 3}
       propertyPath: m_Name
-      value: Phys Button
+      value: Bell
       objectReference: {fileID: 0}
     - target: {fileID: 4736932322301784666, guid: a7afdf87c4fbed54fb267aa295f009e8, type: 3}
       propertyPath: m_Size.x
