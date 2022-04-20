@@ -4,15 +4,25 @@ using UnityEngine;
 
 public class SS_MixedController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    private void Start() {
+        // Register the Purchase events
+        GameManager.instance.onPurchaseBegin += OnPurchaseBegin;   
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDestroy() {
+        GameManager.instance.onPurchaseBegin -= OnPurchaseBegin;
+    }
+
+    public void TogglePurchase() {
+        GameManager.instance.OnPurchaseBegin();
+    }
+
+    public void PressBuy() {
+        GameManager.instance.OnPurchaseCompleted();
+    }
+
+    private void OnPurchaseBegin()
     {
-        
+        print("Started purchase");   
     }
 }
