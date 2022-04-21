@@ -4,32 +4,45 @@ using UnityEngine.InputSystem;
 
 public class SS_GuiController : MonoBehaviour
 {
-    [Tooltip("The button on the controller that activates the purchase whilst in the trigger/purchase area.")]
-    [SerializeField] private List<InputActionReference> purchaseActionRef;
+        // Refrence to text mesh pro text object
+    [SerializeField] private TMPro.TextMeshProUGUI text;
+    [SerializeField] private GameObject buyButton;
+    [SerializeField] private GameObject UI;
 
-    private void OnTriggerExit(Collider other)
-    {
-        // Check if the other is the Player, if so invoke the OnPurchaseBegin event.
-        if (other.gameObject.tag == "Player") GameManager.instance.OnPurchaseAborted();
+    private void Start() {
+        // Register the Purchase events
+        GameManager.instance.onPurchaseBegin += OnPurchaseBegin;  
+        GameManager.instance.onPurchaseAborted += OnPurchaseAborted; 
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        // Check if the other is the Player, if so show the tooltip for how to activate the purchase menu.
-        //if (other.gameObject.tag == "Player") GameManager.instance.OnPurchaseBegin();
+    private void OnDestroy() {
+        GameManager.instance.onPurchaseBegin -= OnPurchaseBegin;
+        GameManager.instance.onPurchaseAborted -= OnPurchaseAborted;
     }
 
-    private void OnTriggerStay(Collider other)
-    {
-        // Check if the other is the Player, if so invoke the OnPurchaseBegin event.
-        if (other.gameObject.tag != "Player") return;
-            // Check if the purchase is active, if so invoke the OnPurchaseCompleted event.
-        foreach (InputActionReference actionRef in purchaseActionRef)
-        {
-            if (!actionRef.action.triggered) return;
-            GameManager.instance.OnPurchaseBegin();
-        }
+    public void TogglePurchase() {
+        GameManager.instance.OnPurchaseBegin();
     }
 
-    public void InvokePurchase() => GameManager.instance.OnPurchaseCompleted();
+    public void PressBuy() {
+        GameManager.instance.OnPurchaseCompleted();
+    }
+
+    private void OnPurchaseBegin()
+    {
+        print("Started purchase");
+        UI.SetActive(true);
+    }
+
+    private void OnPurchaseAborted()
+    {
+        print("Purchase aborted");
+        UI.SetActive(false);
+    }
+
+    public void ChangeInfo(string info)
+    {
+        text.text = info;
+        buyButton.SetActive(true);
+    }
 }
