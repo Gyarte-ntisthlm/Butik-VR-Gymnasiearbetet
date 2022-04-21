@@ -751,7 +751,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefix: intro
-  title: 
 --- !u!4 &871083507
 Transform:
   m_ObjectHideFlags: 0
@@ -910,6 +909,7 @@ MonoBehaviour:
   GUIInstruction:
   - {fileID: 6426536338884919765, guid: c767823a3abaf5a4d873266e304ca5ee, type: 3}
   DoorInstructions: {fileID: 3338687768976556369, guid: 39c56369d80548447921960fc2a4548a, type: 3}
+  DoneInstructions: {fileID: 7293891131479192626, guid: 312ab5fe66826024ab2eea049d2f6758, type: 3}
   SingleBell: {fileID: 349818454}
   RateBell: {fileID: 1264923194}
   Door: {fileID: 594511139}

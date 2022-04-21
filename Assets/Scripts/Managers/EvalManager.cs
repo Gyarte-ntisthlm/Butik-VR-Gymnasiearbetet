@@ -14,6 +14,7 @@ public class EvalManager : MonoBehaviour
     [SerializeField] private List<GameObject> GUIInstruction = new List<GameObject>();
 
     [SerializeField] private GameObject DoorInstructions;
+    [SerializeField] private GameObject DoneInstructions;
 
     [SerializeField] private GameObject SingleBell;
     [SerializeField] private GameObject RateBell;
@@ -92,7 +93,11 @@ public class EvalManager : MonoBehaviour
         RateBell.SetActive(false);
         SingleBell.SetActive(true);
 
-        if(currentInstruction > 0){
+        if(
+            currentInstruction > 0 &&( 
+                !(GameManager.instance.order == "int-gui" && evalForScene == "GUI") ||
+                !(GameManager.instance.order == "gui-int" && evalForScene == "Interactive")))
+            {
             Instantiate(DoorInstructions, eval_gui.transform);
             Door.SetActive(true);
             GameManager.instance.OnActivateDoor();
@@ -120,6 +125,19 @@ public class EvalManager : MonoBehaviour
         if (GameManager.instance.order == "int-gui" && evalForScene == "Mixed") 
         {
             GUI();
+            return;
+        }
+
+        if (GameManager.instance.order == "gui-int" && evalForScene == "Interactive")
+        {  
+            Instantiate(DoneInstructions, eval_gui.transform);
+            AnalyticsManager.instance.LaunchQuestionnaire();
+            return;
+        }
+        if (GameManager.instance.order == "int-gui" && evalForScene == "GUI")
+        {
+            Instantiate(DoneInstructions, eval_gui.transform);
+            AnalyticsManager.instance.LaunchQuestionnaire();
             return;
         }
 

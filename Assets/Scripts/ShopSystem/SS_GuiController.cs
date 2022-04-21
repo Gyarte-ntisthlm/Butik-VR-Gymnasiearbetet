@@ -9,6 +9,9 @@ public class SS_GuiController : MonoBehaviour
     [SerializeField] private GameObject buyButton;
     [SerializeField] private GameObject UI;
 
+    [SerializeField] private GameObject RightRayInteractor;
+    [SerializeField] private GameObject LeftRayInteractor;
+
     private void Start() {
         // Register the Purchase events
         GameManager.instance.onPurchaseBegin += OnPurchaseBegin;  
@@ -31,13 +34,18 @@ public class SS_GuiController : MonoBehaviour
     private void OnPurchaseBegin()
     {
         print("Started purchase");
-        UI.SetActive(true);
+        UI.SetActive(true);        
+        LeftRayInteractor.SetActive(true);
+        RightRayInteractor.SetActive(true);
+
     }
 
     private void OnPurchaseAborted()
     {
         print("Purchase aborted");
         UI.SetActive(false);
+        LeftRayInteractor.SetActive(false);
+        RightRayInteractor.SetActive(false);
     }
 
     public void ChangeInfo(string info)
