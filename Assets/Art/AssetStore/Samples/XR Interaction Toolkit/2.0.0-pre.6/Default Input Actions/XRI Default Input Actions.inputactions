@@ -612,7 +612,7 @@
                 {
                     "name": "",
                     "id": "866dae3f-e201-4fa6-96f0-83f76a219228",
-                    "path": "<XRController>{LeftHand}/primaryTouch",
+                    "path": "<XRController>{LeftHand}/primaryTouched",
                     "interactions": "",
                     "processors": "",
                     "groups": "Generic XR Controller",
@@ -623,7 +623,7 @@
                 {
                     "name": "",
                     "id": "5204d77f-963a-4697-873d-5e897e18074b",
-                    "path": "<XRController>{LeftHand}/touchpadTouch",
+                    "path": "<XRController>{LeftHand}/touchpadTouched",
                     "interactions": "",
                     "processors": "",
                     "groups": "Generic XR Controller",
