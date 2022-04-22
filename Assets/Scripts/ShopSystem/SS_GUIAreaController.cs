@@ -45,6 +45,8 @@ public class SS_GUIAreaController : MonoBehaviour
         if (other.gameObject.tag != "Player") return;
         // Check if the purchase is active, if so invoke the OnPurchaseCompleted event.
 
-        if (purchaseActionRefRight.action.triggered || purchaseActionRefLeft.action.triggered) GameManager.instance.OnPurchaseBegin();
+
+        //// This causes the purchase to be registered multiple times. Fix this.
+        if (purchaseActionRefRight.action.triggered || purchaseActionRefLeft.action.triggered) FindObjectOfType<SS_GuiController>().TogglePurchase();
     }
 }

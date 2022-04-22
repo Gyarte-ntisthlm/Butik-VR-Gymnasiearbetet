@@ -1,7 +1,7 @@
 // NOTE(Zedzee):
 // In this script, it will listen on all the events from the game manager
 // and set the current timestamp since the game started when the event is triggered.
-// The saved timestamp is stored in a dictionary, and the dictionary is saved in a file (analytics.log) once the "sceneCompleted" event is called.
+// The saved timestamp is stored in a dictionary, and the dictionary is saved in a file (.analytics) once the "sceneCompleted" event is called.
 // The file is loaded and parsed in the last scene, this is then sent along with the web request when the questionnaire is opened.
 
 
@@ -21,7 +21,7 @@ public class AnalyticsController : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        path = $"{Application.persistentDataPath}/{prefix}_analytics.log";
+        path = $"{Application.persistentDataPath}/{prefix}.analytics";
 
         // Start listening on all GameManager events
 

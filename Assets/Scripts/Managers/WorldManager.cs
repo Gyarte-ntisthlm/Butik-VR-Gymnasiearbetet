@@ -57,8 +57,17 @@ public class WorldManager : MonoBehaviour
         // It do be treading close to YandareDev levels of if statements, but it works.
     }
 
+    private bool toggle = false;
     private void OnPurchaseCompleted() {
+        if (toggle) return;
         StartCoroutine(LoadEval());
+        toggle = true;
+        StartCoroutine(ToggleEval());
+    }
+
+    private IEnumerator ToggleEval() {
+        yield return new WaitForSeconds(3);
+        toggle = false;
     }
 
     private IEnumerator LoadEval() {

@@ -35,7 +35,7 @@ public class AnalyticsManager : MonoBehaviour
         onQuestionnaireLaunched += questionnaireOrder;
 
        // Check that all of the necessary dependencies for Firebase are present on the system.
-        FirebaseApp.CheckDependenciesAsync().ContinueWith(task => {
+        FirebaseApp.CheckAndFixDependenciesAsync().ContinueWith(task => {
             
             dependencyStatus = task.Result;
             
@@ -95,14 +95,6 @@ public class AnalyticsManager : MonoBehaviour
         {
             user = RegisterTask.Result;
             Debug.Log("User created successfully");
-
-            user.UpdateUserProfileAsync(new UserProfile
-            {
-                DisplayName = id
-            }).ContinueWith(task => {
-                if (task.IsCompleted) Debug.Log("User profile updated successfully");
-                else Debug.Log("User profile update failed");
-            });
             
             CreateDatabaseEntry();
         }
@@ -116,8 +108,11 @@ public class AnalyticsManager : MonoBehaviour
     {
         // Create a new entry in the database
         firestore = FirebaseFirestore.DefaultInstance;
+        print("Assinging firestore");
         DocumentReference docRef = firestore.Collection("data").Document(user.UserId);
+        print("Assinging docRef");
 
+        print("Getting recorded data");
         Dictionary<string, object> userData = new Dictionary<string, object>
         {
             { "id", id },
@@ -131,6 +126,7 @@ public class AnalyticsManager : MonoBehaviour
             { "collectedData", GetAnalyticsData()}
         };
 
+        print("Setting data");
         docRef.SetAsync(userData).ContinueWith(task => {
             if (task.IsCompleted)
             {
@@ -148,7 +144,9 @@ public class AnalyticsManager : MonoBehaviour
 
     private Dictionary<string, object> GetAnalyticsData()
     {
+        print("Getting analytics data");
         string[] files = GetDataFiles();
+
         AnalyticsData[] args = new AnalyticsData[files.Length];
 
         Dictionary<string, object> data = new Dictionary<string, object>();
@@ -167,6 +165,8 @@ public class AnalyticsManager : MonoBehaviour
             temp.Add("Rating", args[i].Rating);
 
             data.Add(args[i].prefix, temp);
+
+            print(temp.ToString());
         }
 
 
@@ -182,7 +182,7 @@ public class AnalyticsManager : MonoBehaviour
     string[] GetDataFiles()
     {
         // Read all the .log files in the persistent data path
-        return Directory.GetFiles(Application.persistentDataPath, "*.log");
+        return Directory.GetFiles(Application.persistentDataPath, "*.analytics");
     }
 
     AnalyticsData Deserialize(string data)

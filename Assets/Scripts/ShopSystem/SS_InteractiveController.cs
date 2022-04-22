@@ -7,10 +7,24 @@ public class SS_InteractiveController : MonoBehaviour
     private bool hasMoney = false;
     private bool isInvoked = false;
     private List<GameObject> purchaseObjects = new List<GameObject>();
+    private bool isPurchasing = false;
+
+    private void Start() {
+        GameManager.instance.onPurchaseBegin += OnPurchaseBegin;
+    }
+
+    private void OnDestroy() {
+        GameManager.instance.onPurchaseBegin -= OnPurchaseBegin;
+    }
+
+    private void OnPurchaseBegin() => isPurchasing = true;
 
     public void AddMoney()
     {
         hasMoney = true;
+        
+        if(isPurchasing) return;
+        GameManager.instance.OnPurchaseBegin();
     }
 
     public void RemoveMoney()
@@ -46,7 +60,7 @@ public class SS_InteractiveController : MonoBehaviour
         {
             purchaseObjects.Remove(other.gameObject);
 
-            if (purchaseObjects.Count == 0)
+            if (purchaseObjects.Count == 0 && !hasMoney)
                 GameManager.instance.OnPurchaseAborted();
         }
     }

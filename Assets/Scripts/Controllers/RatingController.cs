@@ -31,7 +31,7 @@ public class RatingController : MonoBehaviour
         string evalForScene = FindObjectOfType<WorldManager>().GetComponent<WorldManager>().EvalForScene;
 
         // Read the log files from the persistant storage
-        string path = $"{Application.persistentDataPath}/{evalForScene}_analytics.log";
+        string path = $"{Application.persistentDataPath}/{evalForScene}.analytics";
 
         // Read the log files from the persistant storage
         // Parse the json data and rewrite the file with the correct rating data

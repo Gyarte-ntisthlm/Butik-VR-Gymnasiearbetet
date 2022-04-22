@@ -12,6 +12,8 @@ public class SS_GuiController : MonoBehaviour
     [SerializeField] private GameObject RightRayInteractor;
     [SerializeField] private GameObject LeftRayInteractor;
 
+    private bool isPurchasing = false;
+
     private void Start() {
         // Register the Purchase events
         GameManager.instance.onPurchaseBegin += OnPurchaseBegin;  
@@ -24,7 +26,9 @@ public class SS_GuiController : MonoBehaviour
     }
 
     public void TogglePurchase() {
+        if (isPurchasing) return;
         GameManager.instance.OnPurchaseBegin();
+        isPurchasing = true;
     }
 
     public void PressBuy() {
@@ -37,7 +41,6 @@ public class SS_GuiController : MonoBehaviour
         UI.SetActive(true);        
         LeftRayInteractor.SetActive(true);
         RightRayInteractor.SetActive(true);
-
     }
 
     private void OnPurchaseAborted()
@@ -46,6 +49,7 @@ public class SS_GuiController : MonoBehaviour
         UI.SetActive(false);
         LeftRayInteractor.SetActive(false);
         RightRayInteractor.SetActive(false);
+        isPurchasing = false;
     }
 
     public void ChangeInfo(string info)
