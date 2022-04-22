@@ -20,7 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Mixed.unity
     guid: 693f354375477924fbf176d1c9a4ef13
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Thanks.unity
     guid: 15eb21abfe4728845b0a923f336a24b2
   m_configObjects:
