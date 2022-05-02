@@ -392,14 +392,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2353613264080051676, guid: 5e9db85ccd7947144b504728fbe43c9b, type: 3}
-      propertyPath: m_text
-      value: The money is in your hand!
-      objectReference: {fileID: 0}
-    - target: {fileID: 2874445081839471906, guid: 5e9db85ccd7947144b504728fbe43c9b, type: 3}
-      propertyPath: m_TeleportationProvider
-      value: 
-      objectReference: {fileID: 1253218180}
     - target: {fileID: 2874445082568856060, guid: 5e9db85ccd7947144b504728fbe43c9b, type: 3}
       propertyPath: m_Name
       value: Store
@@ -455,10 +447,6 @@ PrefabInstance:
     - target: {fileID: 5580177209076152050, guid: 5e9db85ccd7947144b504728fbe43c9b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6364234504600431568, guid: 5e9db85ccd7947144b504728fbe43c9b, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6623108489182493574, guid: 5e9db85ccd7947144b504728fbe43c9b, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -679,17 +667,6 @@ CapsuleCollider:
   m_Height: 0.01
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1253218180 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6999493590356022001, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
-  m_PrefabInstance: {fileID: 1279906202}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01f69dc1cb084aa42b2f2f8cd87bc770, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1279906202
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -764,24 +741,6 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 412427300, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
   m_PrefabInstance: {fileID: 1279906202}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1373490853 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 448456052, guid: 5e9db85ccd7947144b504728fbe43c9b, type: 3}
-  m_PrefabInstance: {fileID: 468857274}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1373490856
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1373490853}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3, y: 0.05, z: 0.01}
-  m_Center: {x: 0, y: 1.1, z: -0.42}
 --- !u!1001 &1983745109
 PrefabInstance:
   m_ObjectHideFlags: 0

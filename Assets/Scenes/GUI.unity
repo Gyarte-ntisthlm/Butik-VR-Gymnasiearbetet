@@ -752,17 +752,6 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 412427300, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
   m_PrefabInstance: {fileID: 646685328}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &646685330 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6999493590356022001, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
-  m_PrefabInstance: {fileID: 646685328}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01f69dc1cb084aa42b2f2f8cd87bc770, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &646685331 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6999493589088707290, guid: 1dc64bc94efa42f47bfc72eb5b8d381a, type: 3}
@@ -3815,14 +3804,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2047496337, guid: 5e9db85ccd7947144b504728fbe43c9b, type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 646685329}
-    - target: {fileID: 2874445081839471906, guid: 5e9db85ccd7947144b504728fbe43c9b, type: 3}
-      propertyPath: m_TeleportationProvider
-      value: 
-      objectReference: {fileID: 646685330}
     - target: {fileID: 2874445082568856060, guid: 5e9db85ccd7947144b504728fbe43c9b, type: 3}
       propertyPath: m_Name
       value: Store
@@ -3886,10 +3867,6 @@ PrefabInstance:
     - target: {fileID: 6623108489182493574, guid: 5e9db85ccd7947144b504728fbe43c9b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7205697544635346464, guid: 5e9db85ccd7947144b504728fbe43c9b, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7476199936944129790, guid: 5e9db85ccd7947144b504728fbe43c9b, type: 3}
       propertyPath: m_Materials.Array.data[0]
